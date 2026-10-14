@@ -103,7 +103,7 @@
 | 文件 | 说明 |
 |---|---|
 | `course-copilot-v1.0.0.zip` | 扩展本体（6 个文件，解压后直接加载） |
-| `Course Copilot 使用手册（测试版 v1.0.0）.docx` | 面向使用者的图文手册（仓库内亦有 [Markdown 版](https://github.com/) `docs/manual.md`） |
+| `Course Copilot 使用手册（测试版 v1.0.0）.docx` | 面向使用者的图文手册（仓库内亦有 [Markdown 版](https://github.com/Lv-yuchen/course-copilot/blob/main/docs/manual.md) `docs/manual.md`） |
 
 ### 校验
 
