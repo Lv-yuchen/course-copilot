@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Copilot · 武汉大学自主选课助手</title>
+<meta name="description" content="武汉大学自主选课浏览器扩展：读取你自己已登录页面上的可选课程，结合公开学生评价，按可调偏好给出确定性推荐。不选课、不退课、不提交。">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --ink: #1a1d24;
+    --muted: #5b6472;
+    --line: #e3e6ec;
+    --accent: #2f6fed;
+    --accent-soft: #eef3ff;
+    --ok: #1a8f5a;
+    --warn: #b06a00;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei",
+                 "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    background: linear-gradient(160deg, #eef3ff 0%, #f7f8fa 100%);
+    border-bottom: 1px solid var(--line);
+    padding: 64px 0 56px;
+  }
+  h1 { font-size: 40px; margin: 0 0 10px; letter-spacing: -0.5px; }
+  .tagline { font-size: 18px; color: var(--muted); margin: 0 0 6px; }
+  .sub { font-size: 15px; color: var(--muted); margin: 0; }
+  .badges { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge {
+    font-size: 13px; padding: 3px 11px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--line); color: var(--muted);
+  }
+  .badge.ok { background: #eaf7f0; border-color: #cbe9da; color: var(--ok); }
+
+  .buttons { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: 10px;
+    text-decoration: none; font-size: 15px; font-weight: 600;
+    border: 1px solid var(--accent); color: #fff; background: var(--accent);
+    transition: opacity .15s ease;
+  }
+  .btn:hover { opacity: .88; }
+  .btn.ghost { background: var(--card); color: var(--accent); border-color: var(--line); }
+  .btn.ghost:hover { border-color: var(--accent); }
+
+  main { padding: 8px 0 72px; }
+  section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-size: 22px; margin: 0 0 18px; }
+  h3 { font-size: 16px; margin: 22px 0 8px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  code {
+    background: #eceff4; padding: 2px 7px; border-radius: 5px;
+    font-size: 13.5px; font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  }
+  pre {
+    background: #1a1d24; color: #e6e9ef; padding: 16px 18px; border-radius: 10px;
+    overflow-x: auto; font-size: 13.5px; line-height: 1.6;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  }
+  pre code { background: none; padding: 0; color: inherit; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 30px; } }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 18px 20px;
+  }
+  .card h3 { margin-top: 0; }
+  .card p { margin-bottom: 0; color: var(--muted); font-size: 14.5px; }
+
+  .note {
+    background: var(--accent-soft); border: 1px solid #d6e2ff;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 14px 18px; margin: 16px 0;
+    font-size: 14.5px; color: #24406e;
+  }
+  .note strong { color: #16305c; }
+
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14.5px; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; background: #fafbfc; }
+
+  a { color: var(--accent); }
+  footer {
+    padding: 34px 0 56px; color: var(--muted); font-size: 13.5px;
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Course Copilot</h1>
+    <p class="tagline">武汉大学自主选课浏览器扩展</p>
+    <p class="sub">
+      读取你自己已登录的选课页面上已有的课程信息，结合公开学生评价，按可调偏好给出<strong>确定性、可解释</strong>的推荐。
+    </p>
+    <div class="badges">
+      <span class="badge">Edge / Chrome</span>
+      <span class="badge">Manifest V3</span>
+      <span class="badge">MIT License</span>
+      <span class="badge ok">801 项测试通过</span>
+      <span class="badge ok">不选课 · 不提交</span>
+    </div>
+    <div class="buttons">
+      <a class="btn" href="https://github.com/Lv-yuchen/course-copilot/releases/tag/v1.0.0">下载扩展 v1.0.0</a>
+      <a class="btn ghost" href="https://github.com/Lv-yuchen/course-copilot">查看源码</a>
+      <a class="btn ghost" href="https://github.com/Lv-yuchen/course-copilot/blob/main/docs/manual.md">使用手册</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>它做什么</h2>
+    <p>
+      一次点击「加载可选课程信息并生成推荐」，即完成三件事，全部<strong>有界</strong>且<strong>只读</strong>：
+    </p>
+    <ul>
+      <li>启用页面<strong>自带的</strong>「有余量」筛选，让候选池只包含当前可选课程</li>
+      <li>点页面底部的「点此查看更多」，把剩余结果加载完（上限 20 次点击）</li>
+      <li>仅对<strong>教师信息不完整</strong>的课程面板展开详情，补全任课老师</li>
+    </ul>
+    <p>随后重新读取整页并交给推荐引擎。准备过程中可随时<strong>取消</strong>；取消后已加载的信息保留，并可再次开始。</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>确定性推荐</h3>
+        <p>同样的课程数据 + 同样的偏好，必然得到同样的顺序与分数。每条推荐带推荐分、置信度与逐维度证据。</p>
+      </div>
+      <div class="card">
+        <h3>页面事实</h3>
+        <p>余量与本轮已选直接读取页面公布的数字。竞争提示仅在「本轮已选 &gt; 本轮余量」时出现，且明确不代表选中概率。</p>
+      </div>
+      <div class="card">
+        <h3>学生评价原文</h3>
+        <p>来自公开的 whucourses.cn，每门课最多 3 段原文摘录，按需展开。不改写、不做 AI 摘要。</p>
+      </div>
+      <div class="card">
+        <h3>可调偏好</h3>
+        <p>成绩友好 / 工作量轻松 / 考勤宽松 / 学生评价 四个 0–10 滑杆，默认 50% / 30% / 15% / 5%。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>安装</h2>
+    <p>本版本以「已解压扩展」形式提供，尚未上架任何扩展商店。</p>
+    <ol>
+      <li>从 <a href="https://github.com/Lv-yuchen/course-copilot/releases/tag/v1.0.0">Release 页面</a> 下载 <code>course-copilot-v1.0.0.zip</code> 并<strong>解压</strong>到你想长期保留的位置</li>
+      <li>打开 <code>edge://extensions/</code>（Chrome 为 <code>chrome://extensions/</code>）</li>
+      <li>打开<strong>开发人员模式</strong></li>
+      <li>点<strong>加载解压缩的扩展</strong>，选择解压出来的文件夹（里面应直接看到 <code>manifest.json</code>）</li>
+    </ol>
+    <div class="note">
+      <strong>构建完成后不需要任何本地后端或开发服务器。</strong>
+      本项目<strong>不存在</strong>任何 Course Copilot 服务器。
+    </div>
+  </section>
+
+  <section>
+    <h2>安全边界</h2>
+    <p>以下均由<strong>代码强制</strong>，并有自动化门禁断言，不只是文案：</p>
+    <table>
+      <tr><th>行为</th><th>状态</th></tr>
+      <tr><td>自动登录 / 处理帐号密码 / 读取或传输 cookie</td><td>不做</td></tr>
+      <tr><td>选课 / 退课 / 提交或确认</td><td>不做</td></tr>
+      <tr><td>页面字段读取范围</td><td>仅课程列表与已授权的座位字段</td></tr>
+      <tr><td>公共评价请求</td><td>仅发往 <code>https://whucourses.cn</code>，且带 <code>credentials: omit</code></td></tr>
+      <tr><td>权限</td><td>仅 <code>sidePanel</code></td></tr>
+      <tr><td>宿主权限</td><td>仅 <code>https://whucourses.cn/*</code></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>从源码构建</h2>
+    <pre><code>pnpm install
+pnpm extension:build</code></pre>
+    <p>产物在 <code>apps/extension/dist</code>。</p>
+  </section>
+
+  <section>
+    <h2>已知限制</h2>
+    <ul>
+      <li><strong>只支持一个页面</strong>：仅 <code>jwgl.whu.edu.cn/xsxk/zzxkyzb_cxZzxkYzbIndex.html</code>，其它教务页面不注入</li>
+      <li><strong>公开评价覆盖不均</strong>：冷门课可能证据不足，会列在「评价证据不足」区而不是被硬塞进推荐</li>
+      <li><strong>自报成绩不是官方平均分</strong>：样本来自学生自愿评价</li>
+      <li><strong>竞争提示不是录取概率</strong></li>
+      <li>推荐是决策辅助，<strong>最终以教务系统为准</strong></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      本项目是个人开发的第三方工具，与武汉大学<strong>没有任何隶属、合作或背书关系</strong>。
+      课程与评价数据均来自公开来源，可能滞后或有误；任何选课决定及其后果由使用者自行承担。
+    </p>
+    <p>
+      <a href="https://github.com/Lv-yuchen/course-copilot">GitHub 仓库</a> ·
+      <a href="https://github.com/Lv-yuchen/course-copilot/releases/tag/v1.0.0">Release v1.0.0</a> ·
+      <a href="https://github.com/Lv-yuchen/course-copilot/blob/main/docs/manual.md">使用手册</a> ·
+      MIT License
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
