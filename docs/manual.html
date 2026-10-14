@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Copilot 使用手册（测试版 v1.0.0）</title>
+<meta name="description" content="Course Copilot 使用手册：安装、打开选课页、生成推荐、看懂结果。武汉大学自主选课浏览器扩展。">
+<style>
+  :root {
+    --bg: #f7f8fa; --card: #ffffff; --ink: #1a1d24; --muted: #5b6472;
+    --line: #e3e6ec; --accent: #2f6fed; --accent-soft: #eef3ff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei",
+                 "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", sans-serif;
+    line-height: 1.85; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  .topbar { background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .topbar a { color: var(--accent); text-decoration: none; font-size: 14.5px; font-weight: 600; }
+  .topbar a:hover { text-decoration: underline; }
+  .topbar .brand { color: var(--ink); font-weight: 700; }
+  header.hero {
+    background: linear-gradient(160deg, #eef3ff 0%, #f7f8fa 100%);
+    border-bottom: 1px solid var(--line); padding: 44px 0 38px;
+  }
+  header.hero h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.4px; line-height: 1.35; }
+  header.hero .meta { color: var(--muted); font-size: 14.5px; margin: 0; }
+  .badges { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge {
+    font-size: 13px; padding: 3px 11px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--line); color: var(--muted);
+  }
+  main { padding: 12px 0 64px; }
+  nav.toc {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 24px; margin: 28px 0 8px;
+  }
+  nav.toc h2 { font-size: 15px; margin: 0 0 12px; color: var(--muted); font-weight: 700; letter-spacing: .5px; }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; }
+  nav.toc > ol > li { margin-bottom: 5px; }
+  nav.toc > ol > li > a { font-weight: 600; }
+  nav.toc ul { list-style: none; margin: 3px 0 9px; padding-left: 18px; }
+  nav.toc ul li { margin-bottom: 2px; font-size: 14.5px; }
+  nav.toc ul li a { color: var(--muted); }
+  nav.toc a { text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+  article h2 {
+    font-size: 24px; margin: 46px 0 16px; padding-top: 8px;
+    letter-spacing: -0.3px; scroll-margin-top: 76px;
+  }
+  article h3 { font-size: 17.5px; margin: 30px 0 10px; color: #2b3140; scroll-margin-top: 76px; }
+  article h2:first-child { margin-top: 12px; }
+  article p { margin: 0 0 14px; }
+  article ul, article ol { margin: 0 0 16px; padding-left: 24px; }
+  article li { margin-bottom: 8px; }
+  article li > p { margin: 8px 0; }
+  article code {
+    background: #eceff4; padding: 2px 7px; border-radius: 5px; font-size: 13.5px;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace; word-break: break-all;
+  }
+  article pre {
+    background: #1a1d24; color: #e6e9ef; padding: 16px 18px; border-radius: 10px;
+    overflow-x: auto; font-size: 13.5px; line-height: 1.65; margin: 0 0 16px;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  }
+  article pre code { background: none; padding: 0; color: inherit; }
+  article blockquote {
+    margin: 0 0 18px; padding: 14px 18px; background: var(--accent-soft);
+    border-left: 3px solid var(--accent); border-radius: 8px; color: #24406e; font-size: 14.5px;
+  }
+  article blockquote p:last-child { margin-bottom: 0; }
+  article hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+  article table {
+    width: 100%; border-collapse: collapse; margin: 6px 0 20px; font-size: 14.5px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  }
+  article th, article td {
+    text-align: left; padding: 10px 13px; border-bottom: 1px solid var(--line); vertical-align: top;
+  }
+  article th { color: var(--muted); font-weight: 700; background: #fafbfc; white-space: nowrap; }
+  article tr:last-child td { border-bottom: none; }
+  article a { color: var(--accent); }
+  footer { padding: 30px 0 56px; color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--line); }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./index.html">Course Copilot</a>
+    <a href="./index.html">← 返回项目主页</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Course Copilot 使用手册（测试版 v1.0.0）</h1>
+    <p class="meta">武汉大学自主选课助手 · 测试版 v1.0.0</p>
+    <div class="badges">
+      <span class="badge">安装 → 打开选课页 → 生成推荐 → 看懂结果</span>
+      <span class="badge">全程约 5 分钟</span>
+      <span class="badge">不选课 · 不提交</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="toc">
+    <h2>目录</h2>
+    <ol>
+<li><a href="#sec-1">开始之前：你需要知道的三件事</a>
+<ul>
+<li><a href="#sec-2">最快上手（如果只有 30 秒）</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">一、这是什么</a>
+<ul>
+<li><a href="#sec-4">它只在一个页面上工作</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">二、安装（用我给你的压缩包）</a>
+<ul>
+<li><a href="#sec-6">2.1 解压</a></li>
+<li><a href="#sec-7">2.2 装进 Edge（推荐）</a></li>
+<li><a href="#sec-8">2.3 用 Chrome 装（可选）</a></li>
+<li><a href="#sec-9">2.4 关于「开发者模式」的提示</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">三、怎么用</a>
+<ul>
+<li><a href="#sec-11">3.1 完整流程</a></li>
+<li><a href="#sec-12">3.2 侧栏在报告什么</a></li>
+</ul>
+</li>
+<li><a href="#sec-13">四、怎么看懂一张推荐卡片</a>
+<ul>
+<li><a href="#sec-14">4.1 三个数字要分清</a></li>
+<li><a href="#sec-15">4.2 结果分成三块</a></li>
+</ul>
+</li>
+<li><a href="#sec-16">五、个性化偏好（按你的想法调整排序）</a>
+</li>
+<li><a href="#sec-17">六、学生评价是真的吗？</a>
+</li>
+<li><a href="#sec-18">七、安全声明（这条最重要）</a>
+</li>
+<li><a href="#sec-19">八、已知限制（先说清楚，免得你以为坏了）</a>
+</li>
+<li><a href="#sec-20">九、遇到问题怎么办</a>
+</li>
+<li><a href="#sec-21">十、帮我测试时，请把这些反馈给我</a>
+</li>
+</ol>
+  </nav>
+
+  <article>
+<blockquote><p>武汉大学自主选课助手。本文件由 Word 版导出，两份内容一致；Word 版见 release 附件（<code>Course Copilot 使用手册（测试版 v1.0.0）.docx</code>）。</p></blockquote>
+<p>感谢帮忙测试。这份手册会带你完成：安装 → 打开选课页 → 生成一次推荐 → 看懂结果。</p>
+<p>全程大约 5 分钟。遇到任何卡住的地方都是有用的反馈，不用怕弄坏什么。</p>
+<hr>
+<h2 id="sec-1">开始之前：你需要知道的三件事</h2>
+<ol>
+<li>它不会替你选课。它只读课程信息、给建议。选课、退课、提交全部要你自己在教务系统里点。
+</li>
+<li>它不接触你的密码。你要自己正常登录教务系统；插件不参与登录、也读不到你的帐号。
+</li>
+<li>它需要挂在Edge（或 Chrome）浏览器上运行，装好后会在浏览器右侧开一个侧栏。
+</li>
+</ol>
+<h3 id="sec-2">最快上手（如果只有 30 秒）</h3>
+<table>
+<thead><tr>
+<th>步骤</th>
+<th>你要做的</th>
+<th>你会看到</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>解压我给你的 zip 到一个固定文件夹</td>
+<td>一个名为 course-copilot-v1.0.0 的文件夹</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Edge 打开 edge://extensions/，开「开发人员模式」</td>
+<td>左上/右上出现「加载解压缩的扩展」按钮</td>
+</tr>
+<tr>
+<td>3</td>
+<td>点该按钮，选那个文件夹</td>
+<td>列表里出现 Course Copilot，版本 1.0.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>自己登录武大教务，打开自主选课页面</td>
+<td>页面正常显示课程列表</td>
+</tr>
+<tr>
+<td>5</td>
+<td>点工具栏上的 Course Copilot 图标</td>
+<td>右侧打开侧栏，显示「已识别 WHU 自主选课页面」</td>
+</tr>
+<tr>
+<td>6</td>
+<td>点「加载可选课程信息并生成推荐」</td>
+<td>侧栏跑完准备流程，出现推荐结果</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sec-3">一、这是什么</h2>
+<p>Course Copilot 是一个浏览器扩展，给武汉大学自主选课用。它读你页面上已经有的课程信息，结合公开的学生评价，按你自己设的偏好给出一份有排序的推荐，帮你在候选课之间做比较。</p>
+<p>它不是抢课/选课机器人，也不是武汉大学官方产品。它是个人的决策辅助工具，最终结果一律以教务系统为准。</p>
+<h3 id="sec-4">它只在一个页面上工作</h3>
+<p>目前只支持这一个网址（通识/自主选课页面）：</p>
+<p><a href="https://jwgl.whu.edu.cn/xsxk/zzxkyzb_cxZzxkYzbIndex.html">https://jwgl.whu.edu.cn/xsxk/zzxkyzb_cxZzxkYzbIndex.html</a></p>
+<p>其它教务页面（成绩、课表、其它选课入口等）不在支持范围，侧栏会显示「当前未检测到支持的 WHU 自主选课页面」。这不是故障。</p>
+<h2 id="sec-5">二、安装（用我给你的压缩包）</h2>
+<h3 id="sec-6">2.1 解压</h3>
+<ol>
+<li>找到我发给你的 course-copilot-v1.0.0.zip。
+</li>
+<li>右键 → 全部解压缩（或「解压到 course-copilot-v1.0.0\」）。
+<p>建议解压到一个固定的、不会被你随手删掉的位置，比如 <code>D:\CourseCopilot\</code>。因为插件是「从这里加载」的：这个文件夹一旦被删或移动，插件就会失效。</p>
+<p>解压后应该直接看到 manifest.json 这个文件，像这样：</p>
+<pre><code>course-copilot-v1.0.0\
+├─ manifest.json          ← 必须在这一层
+├─ background\
+├─ content\
+└─ sidepanel\</code></pre>
+<p>如果解压出来多套了一层同名文件夹（manifest.json 在第二层），那就选里面那一层。</p>
+</li>
+</ol>
+<h3 id="sec-7">2.2 装进 Edge（推荐）</h3>
+<ol>
+<li>打开 Edge。
+</li>
+<li>地址栏输入 edge://extensions/ 并回车。
+</li>
+<li>左下角打开「开发人员模式」开关。
+</li>
+<li>上方会出现「加载解压缩的扩展」按钮，点它。
+</li>
+<li>在弹出的选择框里，选中你刚才解压出来的那个文件夹（选中文件夹本身，不用进去选文件），然后确定。
+<p>成功的话，扩展列表里会出现一张名为 Course Copilot 的卡片，版本显示 1.0.0。</p>
+<p>顺便把它固定到工具栏：点地址栏右边的拼图图标 → 找到 Course Copilot → 点旁边的图钉/眼睛图标。这样后面点它开侧栏更方便。</p>
+</li>
+</ol>
+<h3 id="sec-8">2.3 用 Chrome 装（可选）</h3>
+<p>步骤完全一样，只是地址变成 chrome://extensions/，开关叫「开发者模式」。我在 Edge 上完整测过；Chrome 理论上一致，如果你用 Chrome 遇到问题也请告诉我。</p>
+<h3 id="sec-9">2.4 关于「开发者模式」的提示</h3>
+<ul>
+<li>这是正常的：会一直显示一条「请停用以开发者模式运行的扩展程序」之类的提醒，点关闭即可，不影响使用。
+</li>
+<li>原因是：因为它是未上架商店的测试版。我准备正式发布时会处理这个。
+</li>
+<li>如果失效了：如果哪天插件突然消失，多半是浏览器重启或更新清掉了它，按 2.2 重装一次即可。
+</li>
+</ul>
+<h2 id="sec-10">三、怎么用</h2>
+<h3 id="sec-11">3.1 完整流程</h3>
+<ol>
+<li>自己登录武大教务系统（正常输帐号密码，插件不参与）。
+</li>
+<li>打开自主选课页面：<a href="https://jwgl.whu.edu.cn/xsxk/zzxkyzb_cxZzxkYzbIndex.html">https://jwgl.whu.edu.cn/xsxk/zzxkyzb_cxZzxkYzbIndex.html</a>
+</li>
+<li>点工具栏上的 Course Copilot 图标，右侧打开侧栏。确认它显示「已识别 WHU 自主选课页面」。
+<p>点侧栏里那个大按钮：「加载可选课程信息并生成推荐」。点这一下就等于你同意了接下来的全部操作。</p>
+</li>
+<li>等侧栏跑完。你会依次看到下面的字，别急着关：
+<table>
+<thead><tr>
+<th>侧栏显示</th>
+<th>它正在做什么</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>正在开始…</td>
+<td>刚收到你的指令</td>
+</tr>
+<tr>
+<td>正在筛选可选课程…</td>
+<td>启用页面自带的「有余量」筛选，只保留现在还能选的课</td>
+</tr>
+<tr>
+<td>正在加载可选课程…</td>
+<td>自动点页面底部的「点此查看更多」，把剩下的结果加载完</td>
+</tr>
+<tr>
+<td>正在补全教师信息…</td>
+<td>对教师信息不完整的课程，展开详情把老师名字读出来</td>
+</tr>
+<tr>
+<td>正在重新读取课程信息…</td>
+<td>把整理好的整页再读一遍</td>
+</tr>
+<tr>
+<td>可选课程信息已准备完成</td>
+<td>准备结束，马上开始算推荐</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>随后自动出现「推荐快照」，里面就是推荐结果。
+</li>
+<li>可选：你可以展开某门课的「查看学生评价」看真实评价原文，也可以调偏好后点「更新推荐」重排。
+<p>整个准备过程大约几十秒到一两分钟，取决于课程数量。过程中随时可以点「取消」；取消后已经加载的信息会保留，你可以再点一次开始。</p>
+</li>
+</ol>
+<h3 id="sec-12">3.2 侧栏在报告什么</h3>
+<p>侧栏顶部会显示两个信息：</p>
+<ul>
+<li>页面识别：「已识别 WHU 自主选课页面」或「当前未检测到支持的 WHU 自主选课页面」
+</li>
+<li>面板数量：「检测到课程面板：N」—— 页面上找到了多少个课程条目
+<p>底部还有一行「版本」，显示 1.0.0。如果这里不是 1.0.0，说明加载的不是我这次的包，请告诉我。</p>
+</li>
+</ul>
+<h2 id="sec-13">四、怎么看懂一张推荐卡片</h2>
+<p>每张卡片上的字段，含义如下：</p>
+<table>
+<thead><tr>
+<th>卡片上的字段</th>
+<th>含义</th>
+<th>怎么理解</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>任课老师</td>
+<td>页面公布的授课老师</td>
+<td>补全教师信息之后才会完整</td>
+</tr>
+<tr>
+<td>课程代码</td>
+<td>教务系统的课程编号</td>
+<td>方便你去教务系统核对</td>
+</tr>
+<tr>
+<td>学分</td>
+<td>学分值</td>
+<td>页面没给就显示「学分：暂无数据」，不会瞎猜</td>
+</tr>
+<tr>
+<td>余量</td>
+<td>现在还剩多少名额</td>
+<td>显示「未知」就是页面没公布</td>
+</tr>
+<tr>
+<td>本轮已选</td>
+<td>本轮已经选上这门课的人数</td>
+<td>显示「未知」就是页面没公布</td>
+</tr>
+<tr>
+<td>可选状态</td>
+<td>有余量 / 已满 / 状态未知</td>
+<td>直接来自页面，不参与打分</td>
+</tr>
+<tr>
+<td>推荐排名</td>
+<td>#1、#2…</td>
+<td>按你的偏好算出的顺序</td>
+</tr>
+<tr>
+<td>推荐分</td>
+<td>这门课的综合得分</td>
+<td>分越高越贴合你设的偏好</td>
+</tr>
+<tr>
+<td>置信度</td>
+<td>这个推荐有多可信</td>
+<td>看的是数据够不够，不是课好不好</td>
+</tr>
+<tr>
+<td>证据</td>
+<td>各维度的证据充分程度</td>
+<td>例如「证据充分（28/37）」＝ 37 条评价里 28 条提到了这一项</td>
+</tr>
+<tr>
+<td>评价样本</td>
+<td>这门课有多少条公开评价</td>
+<td>样本少的时候，结论要打折看</td>
+</tr>
+<tr>
+<td>查看学生评价（N）</td>
+<td>N 段学生原文摘录</td>
+<td>点一下展开，默认收起</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sec-14">4.1 三个数字要分清</h3>
+<p>「推荐分」「置信度」「证据」是三个不同的问题，不要混着看：</p>
+<ul>
+<li>推荐分回答：这门课适合你吗？
+</li>
+<li>置信度回答：关于这门课的数据够不够多、够不够可靠？
+</li>
+<li>证据回答：具体到「给分」「工作量」「考勤」这些方面，有多少条评价真的提到了？
+<p>所以「推荐分高但置信度低」是完全可能的：方向对，但样本少，别太当真。</p>
+</li>
+</ul>
+<h3 id="sec-15">4.2 结果分成三块</h3>
+<table>
+<thead><tr>
+<th>区域</th>
+<th>含义</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>推荐课程</td>
+<td>排名靠前、建议优先看的课</td>
+</tr>
+<tr>
+<td>有评价，但未进入推荐</td>
+<td>有公开评价，但综合下来没排进前面。默认折叠，点标题才展开</td>
+</tr>
+<tr>
+<td>评价证据不足</td>
+<td>公开评价太少，没法给出可靠判断。会列出来，但不会被硬塞进推荐</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>关于成绩数字：卡片上的「学生自报平均成绩」来自学生自己填的成绩，不是武汉大学官方课程平均分。括号里是样本数和这个数字代表谁，例如「90.6（28份，当前教师）」。没有样本时显示「暂无数据」，不会显示成 0。</p>
+<hr>
+<p>关于「竞争较高」提示：只有当「本轮已选」大于「余量」时才会出现，意思是「选的人比名额多」。它只是人数和名额的关系，不代表你选上的概率。任一数字缺失时不会显示这个提示。</p>
+<h2 id="sec-16">五、个性化偏好（按你的想法调整排序）</h2>
+<p>侧栏里有「个性化偏好」，默认是收起的，点一下展开。里面有四个滑杆：</p>
+<p>面板上每个滑杆右边会显示两个数，例如 10/10  50%：左边是你拖到的档位，右边是它折算出来的占比。四个滑杆的默认值是：</p>
+<table>
+<thead><tr>
+<th>滑杆</th>
+<th>含义</th>
+<th>默认显示</th>
+<th>折算占比</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>成绩友好</td>
+<td>越容易拿好成绩，越推荐</td>
+<td>10/10</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>工作量轻松</td>
+<td>作业和考核越少，越推荐</td>
+<td>6/10</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>考勤宽松</td>
+<td>点名越少，越推荐</td>
+<td>3/10</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>学生评价</td>
+<td>评价正文越正面，越推荐</td>
+<td>1/10</td>
+<td>5%</td>
+</tr>
+</tbody>
+</table>
+<p>怎么用：</p>
+<ul>
+<li>每个滑杆是 0 到 10 的整数。数字越大 ＝ 你越在意这一项。
+</li>
+<li>滑杆右边会实时显示折算出来的百分比，那是「相对重要程度」。
+<p>你不需要把百分比凑成 100。拖一个滑杆不会自动动别的滑杆。</p>
+</li>
+<li>如果四项全是 0，会提示「至少有一项重要程度需要大于 0。」—— 这是故意的，因为全 0 等于没偏好。
+</li>
+<li>点「恢复默认」回到 10 / 6 / 3 / 1（即 50% / 30% / 15% / 5%）。
+<p>改完偏好后点「更新推荐」，只会重新排序：不会再启用筛选、不会再点「点此查看更多」、不会再展开教师详情。所以这一步很快，也不会重复动你的页面。</p>
+</li>
+</ul>
+<h2 id="sec-17">六、学生评价是真的吗？</h2>
+<ul>
+<li>来源：来自公开的 whucourses.cn（课程评价网站），是学生自己写的。
+<p>每门课最多展示 3 段原文摘录，长度也有上限。不做改写、不做 AI 总结—— 你看到的就是原话（可能是错别字、可能有情绪，都是原文）。</p>
+</li>
+<li>归属：来自当前老师的评价会标明老师名字；只能代表整门课的评价会写「课程整体参考」；
+<p>万一无法确定归属，会写「教师信息未明确」—— 宁可说不确定，也不硬说成是当前老师的评价。</p>
+</li>
+</ul>
+<h2 id="sec-18">七、安全声明（这条最重要）</h2>
+<p>下面这些不是口头承诺，是代码里写死的限制，有自动化检查在守着：</p>
+<table>
+<thead><tr>
+<th>它绝对不会做的事</th>
+<th>说明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>不会自动登录</td>
+<td>登录完全由你自己完成</td>
+</tr>
+<tr>
+<td>不会读你的密码</td>
+<td>代码里没有任何处理帐号密码的地方</td>
+</tr>
+<tr>
+<td>不会读取或上传 cookie</td>
+<td>不碰浏览器的登录凭证</td>
+</tr>
+<tr>
+<td>不会选课</td>
+<td>没有任何报名动作</td>
+</tr>
+<tr>
+<td>不会退课</td>
+<td>没有任何退课动作</td>
+</tr>
+<tr>
+<td>不会提交 / 确认</td>
+<td>不存在任何表单提交</td>
+</tr>
+<tr>
+<td>没有服务器</td>
+<td>不存在 Course Copilot 的后端，你的数据不会被传到任何服务器</td>
+</tr>
+<tr>
+<td>只访问两个网站</td>
+<td>选课页面 jwgl.whu.edu.cn，和公开评价站 whucourses.cn</td>
+</tr>
+</tbody>
+</table>
+<p>它会对你的页面做的操作只有四种：启用页面自带的「有余量」筛选、点一次页面的「查询」、点「点此查看更多」、展开教师信息不完整的课程。</p>
+<p>这些都在你点「加载可选课程信息并生成推荐」那一下被一次性授权。</p>
+<h2 id="sec-19">八、已知限制（先说清楚，免得你以为坏了）</h2>
+<ul>
+<li>① 只支持一个页面。其它教务功能页不工作，侧栏会说不支持。
+</li>
+<li>② 热门课评价多，冷门课可能没几条评价。这类课会出现在「评价证据不足」里，而不是被硬推荐。
+</li>
+<li>③ 成绩是学生自报的，样本有限，不能当官方平均分用。
+</li>
+<li>④ 「竞争较高」只是人数和名额的比较，不是录取概率。
+</li>
+<li>⑤ 推荐只代表「基于现有数据哪个更贴合你的偏好」，不保证你选得上、也不代表课程质量排名。
+</li>
+</ul>
+<h2 id="sec-20">九、遇到问题怎么办</h2>
+<table>
+<thead><tr>
+<th>现象</th>
+<th>先这样试</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>侧栏说「当前未检测到支持的 WHU 自主选课页面」</td>
+<td>确认你打开的是那个自主选课网址，并且已经登录；刷新页面再试</td>
+</tr>
+<tr>
+<td>点按钮后没反应</td>
+<td>确认页面课程列表已经出来（不是空白/加载中）；刷新页面再试一次</td>
+</tr>
+<tr>
+<td>侧栏显示「已停止数据准备，已经加载的信息会保留。」</td>
+<td>这是取消后的正常提示。再点一次「加载可选课程信息并生成推荐」即可</td>
+</tr>
+<tr>
+<td>显示「当前页面无法使用 WHU 的"有余量"筛选，因此未开始准备数据。」</td>
+<td>页面的筛选控件没找到。刷新页面重试；若一直如此请截图告诉我</td>
+</tr>
+<tr>
+<td>显示「未能启用"有余量"筛选，因此未开始准备数据。」</td>
+<td>筛选点了但页面没生效。刷新重试；持续出现请截图</td>
+</tr>
+<tr>
+<td>某门课显示「该课程公开评价暂时不可用」</td>
+<td>评价站暂时没响应或不收录这门课。不影响其它课</td>
+</tr>
+<tr>
+<td>插件整个消失了</td>
+<td>浏览器重启/更新把它清了，按第二章重装一次</td>
+</tr>
+<tr>
+<td>版本显示的不是 1.0.0</td>
+<td>说明加载的不是这次的包，请重新解压安装</td>
+</tr>
+</tbody>
+</table>
+<p>重要：如果插件有任何异常，不要去点教务系统里的「选课」「退课」「提交」来试探 —— 插件本身不碰这些，你也不需要为它承担任何选课风险。</p>
+<h2 id="sec-21">十、帮我测试时，请把这些反馈给我</h2>
+<p>不需要写得很正式，能截图就截图。下面几项最有帮助：</p>
+<table>
+<thead><tr>
+<th>请告诉我</th>
+<th>例子</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>你用的浏览器和版本</td>
+<td>Edge 154 / Chrome 13x</td>
+</tr>
+<tr>
+<td>扩展列表里显示的版本号</td>
+<td>是不是 1.0.0</td>
+</tr>
+<tr>
+<td>你做到哪一步</td>
+<td>装好了 / 打开了选课页 / 点了生成推荐 / 看到结果了</td>
+</tr>
+<tr>
+<td>页面上一共多少门课</td>
+<td>侧栏「检测到课程面板」那个数字</td>
+</tr>
+<tr>
+<td>推荐结果长什么样</td>
+<td>推荐了几门、三块区域各有多少</td>
+</tr>
+<tr>
+<td>哪里不对</td>
+<td>哪一步、你期待什么、实际看到了什么</td>
+</tr>
+<tr>
+<td>有没有报错</td>
+<td>侧栏里的红字，或截图</td>
+</tr>
+<tr>
+<td>偏好调了有没有变化</td>
+<td>例如把「工作量轻松」拉满，排序是否变了</td>
+</tr>
+<tr>
+<td>学生评价能不能看</td>
+<td>点「查看学生评价」是否展开出原文</td>
+</tr>
+</tbody>
+</table>
+<p>特别想知道的：哪里的说明看不懂、哪个数字你不确定是什么意思。这类反馈和 bug 一样有用。</p>
+<hr>
+<p>再次感谢。你看到的任何卡顿、看不懂、或者「这不对吧」的感觉，都请直接说 —— 现在改的成本最低。</p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      本项目是个人开发的第三方工具，与武汉大学<strong>没有任何隶属、合作或背书关系</strong>。
+      任何选课决定及其后果由使用者自行承担。
+    </p>
+    <p>
+      <a href="./index.html">项目主页</a> ·
+      <a href="https://github.com/Lv-yuchen/course-copilot">GitHub 仓库</a> ·
+      <a href="https://github.com/Lv-yuchen/course-copilot/releases/tag/v1.0.0">Release v1.0.0</a> ·
+      MIT License
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
