@@ -1,0 +1,124 @@
+{
+  "name": "@course-copilot/core",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deterministic course-selection core: normalization, matching, aspect analysis, scoring, and ranking. Host-free 鈥?no DSH, no Cordis, no browser, no filesystem.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./aspects": {
+      "types": "./dist/aspects/index.d.ts",
+      "import": "./dist/aspects/index.js",
+      "default": "./dist/aspects/index.js"
+    },
+    "./aspects/scoring": {
+      "types": "./dist/aspects/scoring.d.ts",
+      "import": "./dist/aspects/scoring.js",
+      "default": "./dist/aspects/scoring.js"
+    },
+    "./aspects/lexicon": {
+      "types": "./dist/aspects/lexicon.d.ts",
+      "import": "./dist/aspects/lexicon.js",
+      "default": "./dist/aspects/lexicon.js"
+    },
+    "./aspects/negation": {
+      "types": "./dist/aspects/negation.d.ts",
+      "import": "./dist/aspects/negation.js",
+      "default": "./dist/aspects/negation.js"
+    },
+    "./aspects/extractor": {
+      "types": "./dist/aspects/extractor.d.ts",
+      "import": "./dist/aspects/extractor.js",
+      "default": "./dist/aspects/extractor.js"
+    },
+    "./aspects/grade": {
+      "types": "./dist/aspects/grade.d.ts",
+      "import": "./dist/aspects/grade.js",
+      "default": "./dist/aspects/grade.js"
+    },
+    "./aspects/gradeSignal": {
+      "types": "./dist/aspects/gradeSignal.d.ts",
+      "import": "./dist/aspects/gradeSignal.js",
+      "default": "./dist/aspects/gradeSignal.js"
+    },
+    "./course": {
+      "types": "./dist/types/course.d.ts",
+      "import": "./dist/types/course.js",
+      "default": "./dist/types/course.js"
+    },
+    "./similarity": {
+      "types": "./dist/similarity.d.ts",
+      "import": "./dist/similarity.js",
+      "default": "./dist/similarity.js"
+    },
+    "./eligibility": {
+      "types": "./dist/eligibility.d.ts",
+      "import": "./dist/eligibility.js",
+      "default": "./dist/eligibility.js"
+    },
+    "./parse": {
+      "types": "./dist/parse.d.ts",
+      "import": "./dist/parse.js",
+      "default": "./dist/parse.js"
+    },
+    "./normalize": {
+      "types": "./dist/normalize.d.ts",
+      "import": "./dist/normalize.js",
+      "default": "./dist/normalize.js"
+    },
+    "./alias": {
+      "types": "./dist/alias.d.ts",
+      "import": "./dist/alias.js",
+      "default": "./dist/alias.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js",
+      "default": "./dist/config.js"
+    },
+    "./confidence": {
+      "types": "./dist/confidence.d.ts",
+      "import": "./dist/confidence.js",
+      "default": "./dist/confidence.js"
+    },
+    "./matching": {
+      "types": "./dist/matching/index.d.ts",
+      "import": "./dist/matching/index.js",
+      "default": "./dist/matching/index.js"
+    },
+    "./matching/courseMatcher": {
+      "types": "./dist/matching/courseMatcher.d.ts",
+      "import": "./dist/matching/courseMatcher.js",
+      "default": "./dist/matching/courseMatcher.js"
+    },
+    "./recommendation": {
+      "types": "./dist/recommendation.d.ts",
+      "import": "./dist/recommendation.js",
+      "default": "./dist/recommendation.js"
+    },
+    "./ranking": {
+      "types": "./dist/ranking.d.ts",
+      "import": "./dist/ranking.js",
+      "default": "./dist/ranking.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.11"
+  }
+}

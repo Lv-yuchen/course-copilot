@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Course Copilot</title>
+    <!--
+      The extension Content Security Policy forbids inline script, so behaviour lives in an external module. Styling is in
+      sidepanel.css for the same reason there is no <style> block here: this file stays structure only.
+    -->
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <h1 class="panel-title">Course Copilot</h1>
+      <p class="panel-subtitle">Browser Extension Development</p>
+
+      <!--
+        Starts on the "not detected" wording. The panel has not asked yet at this point, and claiming detection before
+        asking would be the one thing this element must never do.
+      -->
+      <p class="panel-status" id="page-status">当前未检测到支持的 WHU 自主选课页面</p>
+
+      <!--
+        Hidden until a supported page is identified. The placeholder is an ellipsis rather than 0: 0 would assert that the
+        page has no course panels, which is a different claim from "the number is not known yet".
+      -->
+      <p class="panel-count" id="panel-count" hidden>检测到课程面板：…</p>
+
+      <!--
+        REMOVED IN PRE-RELEASE-UX-A14: a development block used to sit here, listing at most three parsed course identities so the parser could be checked against
+        the page by eye.
+
+        That was a development aid, and it shipped. A release panel must not show the reader raw parser output: names and codes taken from the page are not product
+        information, the teacher field reads as missing on every unexpanded row, and the block competes with the one action the panel exists to offer.
+
+        Nothing about READING the page changed. The content script still scans teaching-class rows, the visible-rows contract still answers with the complete loaded
+        set, and the scanner's own tests are untouched — only the surface that displayed three samples to a user is gone.
+
+        The block's own heading is deliberately not repeated in this comment. Comments survive into the built document, and a scanner looking for the removed
+        wording cannot tell an explanation from a reintroduction — which is exactly what the gate check for it just proved.
+      -->
+
+      <!--
+        The ONE approved data-preparation control.
+
+        This is the only entry point for the two read-only page interactions the extension performs: loading the list to the end, and expanding the details of
+        the courses whose teacher data the page has not published. Both happen inside this single approval, which is why the note below names BOTH of them — a
+        user who agreed to "load the list" has not agreed to "expand course details", and the copy must not quietly widen what was approved.
+
+        Pressing this button is the ONLY thing that starts a preparation. Nothing on the startup path sends the start message, and the startup path reads
+        instead.
+      -->
+      <!--
+        The ONE approval copy, and the only copy of it.
+
+        It used to exist twice: here, and as `PREPARATION_APPROVAL_COPY` in `full-preparation.ts`. That constant had NO production caller — the HTML was what
+        rendered — so the two could silently disagree while both looked authoritative. The duplication is now gone and the paragraph below is the single source;
+        the tests read THIS element and assert its text, so an edit here is an edit the tests see.
+
+        The approval covers THREE page interactions, and it names each of them: enabling WHU's own 「有余量」 filter, clicking the page's load-more control, and
+        expanding only the courses whose teacher data is incomplete. A user who agreed to "load the list" has not agreed to have a filter applied or details
+        expanded, so the copy must not quieten any of the three.
+      -->
+      <section class="panel-autoload" id="full-preparation">
+        <h2 class="panel-autoload-title">数据准备</h2>
+        <p class="panel-autoload-note" id="full-preparation-note">
+          Course Copilot 会自动启用 WHU 的“有余量”筛选，只分析当前可选课程；随后自动点击页面底部的“点此查看更多”加载全部结果，并仅对教师信息未完整的课程展开详情以补全任课老师。不会选课、退课或提交。完成数据准备后，会基于当前课程信息和公开课程评价生成推荐。
+        </p>
+        <!-- The line that carries phase progress, the final-read fact and every stop reason. Empty until the feature is used. -->
+        <p class="panel-autoload-message" id="full-preparation-message" hidden></p>
+        <div class="panel-autoload-controls">
+          <button type="button" class="panel-autoload-button" id="full-preparation-start">加载可选课程信息并生成推荐</button>
+          <button type="button" class="panel-autoload-cancel" id="full-preparation-cancel" hidden>取消</button>
+        </div>
+      </section>
+
+      <!--
+        The user's own importance weights, collapsed by default.
+
+        PRE-RELEASE-UX-A18. Four sliders, each 0..10, where the numbers are a RATIO rather than percentages: the user says how much each dimension
+        matters to them and the panel shows what proportion that works out to. Nobody has to make four numbers reach 100, and no slider is ever moved
+        by the panel because another one changed.
+
+        `<details>` is used rather than a hand-rolled disclosure because the browser already gives it keyboard operation, the correct accessibility
+        role and a state a test can read — the same reason the rated section's toggle is a real `<button>`.
+
+        The four rows are STATIC markup, so the controls exist before any script runs and the panel has nothing to assemble on load. That puts the
+        labels and the default values in two places, which is a real risk, so `step42PreferenceControls.test.ts` cross-checks every row against the
+        module's own table: a label or a default that drifts from `preferences.ts` fails the suite rather than shipping.
+
+        The percentage is written by the panel from the slider values, so the two cannot disagree, and the label says 约 because the engine's
+        redistribution across an absent aspect can move the effective weight.
+
+        Labels are the frozen product wording: 成绩友好 / 工作量轻松 / 考勤宽松 / 学生评价. The two explanation-only dimensions are deliberately
+        ABSENT — a control for either would do nothing to the order, and a control that does nothing is worse than no control.
+      -->
+      <details class="panel-preferences" id="preferences">
+        <summary class="panel-preferences-summary">个性化偏好</summary>
+        <div class="panel-preferences-body">
+          <p class="panel-preferences-note">档位表示您有多在意这一项，右侧是按比例折算出的实际权重。</p>
+          <div class="panel-preferences-rows" id="preferences-rows">
+            <div class="panel-preferences-row" data-preference="gradeFriendliness">
+              <label class="panel-preferences-label" for="preference-gradeFriendliness">成绩友好</label>
+              <input class="panel-preferences-slider" type="range" id="preference-gradeFriendliness" min="0" max="10" step="1" value="10" />
+              <span class="panel-preferences-value" id="preference-value-gradeFriendliness">10/10</span>
+              <span class="panel-preferences-percent" id="preference-percent-gradeFriendliness">50%</span>
+            </div>
+            <div class="panel-preferences-row" data-preference="workloadFriendliness">
+              <label class="panel-preferences-label" for="preference-workloadFriendliness">工作量轻松</label>
+              <input class="panel-preferences-slider" type="range" id="preference-workloadFriendliness" min="0" max="10" step="1" value="6" />
+              <span class="panel-preferences-value" id="preference-value-workloadFriendliness">6/10</span>
+              <span class="panel-preferences-percent" id="preference-percent-workloadFriendliness">30%</span>
+            </div>
+            <div class="panel-preferences-row" data-preference="attendanceFriendliness">
+              <label class="panel-preferences-label" for="preference-attendanceFriendliness">考勤宽松</label>
+              <input class="panel-preferences-slider" type="range" id="preference-attendanceFriendliness" min="0" max="10" step="1" value="3" />
+              <span class="panel-preferences-value" id="preference-value-attendanceFriendliness">3/10</span>
+              <span class="panel-preferences-percent" id="preference-percent-attendanceFriendliness">15%</span>
+            </div>
+            <div class="panel-preferences-row" data-preference="overallScore">
+              <label class="panel-preferences-label" for="preference-overallScore">学生评价</label>
+              <input class="panel-preferences-slider" type="range" id="preference-overallScore" min="0" max="10" step="1" value="1" />
+              <span class="panel-preferences-value" id="preference-value-overallScore">1/10</span>
+              <span class="panel-preferences-percent" id="preference-percent-overallScore">5%</span>
+            </div>
+          </div>
+          <p class="panel-preferences-problem" id="preferences-problem" hidden></p>
+          <div class="panel-preferences-controls">
+            <button type="button" class="panel-preferences-reset" id="preferences-reset">恢复默认</button>
+            <button type="button" class="panel-preferences-apply" id="preferences-apply">更新推荐</button>
+          </div>
+        </div>
+      </details>
+
+      <!--
+        The recommendation result area: a SNAPSHOT of the approved tab's page, and the courses derived from it.
+
+        It is titled 推荐快照 rather than anything about "this page right now", because the numbers describe the tab as it was when it was read. If the user
+        switches tabs afterwards they are still valid — for that tab, at that moment — and there is deliberately no `tabs.onActivated` refreshing them.
+      -->
+      <section class="panel-recommendation" id="recommendation" hidden>
+        <h2 class="panel-recommendation-title">推荐快照</h2>
+        <!-- The status line: loading, a page-level explanation, an error, or a stale notice. -->
+        <p class="panel-recommendation-message" id="recommendation-message" hidden></p>
+        <!-- Persistent qualifications, shown beside a summary as well as instead of one. -->
+        <p class="panel-recommendation-warning" id="recommendation-teacher-notice" hidden></p>
+        <p class="panel-recommendation-warning" id="recommendation-review-notice" hidden></p>
+        <!--
+          THE SHARED GRADE DISCLAIMER — one sentence for every grade line below it.
+
+          PRE-RELEASE-UX-A12 moved it out of the course cards, where it repeated once per card and would have repeated 130-plus times on a real result.
+
+          PRE-RELEASE-UX-A20 moved it UP to here, above the counts and above every card. It used to sit after the rated section, which put the qualification
+          for the grade figures at the very bottom of a panel that can be thousands of pixels long — a reader met 「学生自报平均成绩」 on the first card
+          without having seen what it is. It now precedes the first figure it qualifies, and there is still exactly ONE of it.
+
+          The renderer owns both its text and its visibility: it is emptied and hidden whenever no card is on screen, so it can never explain a figure that is
+          not there. Position is markup; wording and visibility are the renderer's.
+        -->
+        <p class="panel-grade-disclaimer" id="grade-disclaimer" hidden></p>
+
+        <!-- The three counts, kept apart so a rated course is never confused with one that had no evidence. -->
+        <dl class="panel-recommendation-counts" id="recommendation-counts" hidden>
+          <dt>推荐课程</dt>
+          <dd id="recommendation-count-recommended">0</dd>
+          <dt>有评价但未进入推荐</dt>
+          <dd id="recommendation-count-rated">0</dd>
+          <dt>证据不足</dt>
+          <dd id="recommendation-count-insufficient">0</dd>
+        </dl>
+        <!-- The sentence for an empty ranking, which says WHICH kind of empty it is. -->
+        <p class="panel-recommendation-empty" id="recommendation-empty" hidden></p>
+
+        <!--
+          The course cards, in THREE separate sections.
+
+          Three sections rather than one list with a badge, because the three kinds carry different fields and mean different things: a rated course HAS usable
+          evidence and simply ranked below the cut, while an insufficient one has no usable evidence at all. One merged list would force a single card shape that
+          has to invent the fields the others lack — a confidence, an evidence tier, a score.
+
+          Every string inside these lists is written with `textContent` by the renderer: teacher names and review text come from a page this extension does not
+          control, so none of it is ever assembled as markup.
+        -->
+        <section class="panel-cards" id="cards-recommended" hidden>
+          <h3 class="panel-cards-title">推荐课程</h3>
+          <ol class="course-card-list" id="card-list-recommended"></ol>
+        </section>
+        <!--
+          THE RATED SECTION IS A DISCLOSURE, COLLAPSED BY DEFAULT.
+
+          A real result held about 133 rated-but-not-recommended courses, and rendering them expanded made the panel unusably long: the reader had to scroll past a
+          hundred cards they had not asked for to reach the ones they had. The section therefore carries its own toggle, and the control is a real `<button>` rather
+          than a styled triangle so it is reachable by keyboard and announced by a screen reader.
+
+          `aria-expanded` is the state and the cards container's `hidden` is the rendering of it. The two are always set together — by the renderer when a new result
+          arrives, and by the click handler when the reader toggles — so the announced state can never disagree with what is on screen. The container is nested INSIDE
+          the section rather than being the section, because hiding the cards must leave the header and its control visible: a collapsed section still has to say what
+          it is and how much is behind it.
+        -->
+        <section class="panel-cards" id="cards-rated" hidden>
+          <button type="button" class="panel-cards-toggle" id="rated-toggle" aria-expanded="false" aria-controls="rated-cards">
+            <span class="panel-cards-toggle-label">有评价但未进入推荐</span>
+            <span class="panel-cards-toggle-count" id="rated-count"></span>
+          </button>
+          <div id="rated-cards" hidden>
+            <ol class="course-card-list" id="card-list-rated"></ol>
+          </div>
+        </section>
+        <section class="panel-cards" id="cards-insufficient" hidden>
+          <h3 class="panel-cards-title">评价证据不足</h3>
+          <ol class="course-card-list" id="card-list-insufficient"></ol>
+        </section>
+      </section>
+
+      <dl class="panel-facts">
+        <dt>版本</dt>
+        <dd id="fact-version">…</dd>
+      </dl>
+    </main>
+    <script type="module" src="sidepanel.js"></script>
+  </body>
+</html>

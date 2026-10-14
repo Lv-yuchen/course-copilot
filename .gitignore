@@ -1,0 +1,37 @@
+# Build output of the browser extension and of every workspace package.
+dist/
+packages/*/dist/
+
+# Dependencies.
+node_modules/
+
+# A DSH profile or other harness writing its review cache into the workspace.
+.course-selection-copilot/
+
+# Local verification artifacts and scratch files.
+.recon-verify/
+*.bak-*
+*.local.*
+
+# Emitted JavaScript hiding inside source trees.
+#
+# `tsc` here is either typecheck-only (`noEmit`) or writes to `dist`, so nothing under a `src/` should ever appear as `.js`,
+# `.d.ts` or `.map`. If it does, someone ran a build WITHOUT `--noEmit` and the output landed next to the sources.
+#
+# The patterns are UNANCHORED because a leading `src/` would only match at the repository root.
+#
+# This is a safety net, not a detection mechanism: an ignored file is invisible in `git status`. The hand-written ambient
+# declarations below are SOURCE, not emitted output, so each is exempted individually rather than opening a directory hole.
+**/src/**/*.js
+**/src/**/*.d.ts
+**/src/**/*.js.map
+**/src/**/*.d.ts.map
+!apps/extension/src/types/chrome.d.ts
+!apps/extension/src/types/globals.d.ts
+!apps/extension/src/types/recommendation-types.d.ts
+
+# Editor and OS noise.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

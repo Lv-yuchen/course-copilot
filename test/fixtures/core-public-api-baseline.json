@@ -1,0 +1,2846 @@
+{
+  "generatedFrom": "packages/core/src (TypeScript AST)",
+  "package": {
+    "name": "@course-copilot/core",
+    "version": "1.0.0"
+  },
+  "entrypoints": [
+    {
+      "subpath": ".",
+      "specifier": "@course-copilot/core",
+      "kind": "root barrel",
+      "source": "packages/core/src/index.ts",
+      "count": 133,
+      "runtimeCount": 85,
+      "typeOnlyCount": 48,
+      "exports": [
+        {
+          "name": "AdapterId",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ALIAS_METHODS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "AliasAmbiguity",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "analyzeAspects",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "ASPECT_KEYS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "ASPECT_PRESETS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "AspectAnalysis",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectBreakdown",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectDecision",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectKey",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "aspectLabel",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "AspectMention",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "aspectReliability",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "aspectScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "AspectScore",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectWeights",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "aspectWeightsFromPreferences",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "Availability",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "availabilityFromSeats",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/eligibility.ts"
+        },
+        {
+          "name": "bigrams",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        },
+        {
+          "name": "buildAspectBreakdown",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "buildReasons",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "calculateCourseScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "calculateDecisionScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "calculateReviewConfidence",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "chineseNumeralToNumber",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "clampMetric",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "cleanCell",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "CleanReview",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "combineGradeSignals",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "compareScores",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "CONFIDENCE_ALIAS_PENALTY",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_FALLBACK_PENALTY",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_HIGH",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_MEDIUM",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_WEIGHTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "ConfidenceTier",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "CourseAlias",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "courseAliases",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "CourseAliasResult",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "CourseLevelReview",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "CourseMatcher",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "courseNameKeys",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "CourseReview",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "CourseScore",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "decisionScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "DEFAULT_ASPECT_WEIGHTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "diceCoefficient",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        },
+        {
+          "name": "EligibilityDecision",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "evaluateEligibility",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/eligibility.ts"
+        },
+        {
+          "name": "EVIDENCE_GATE_SATURATION",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "EXAM_FORMATS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "ExamFormat",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "filterEligible",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/eligibility.ts"
+        },
+        {
+          "name": "fuzzyNameScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        },
+        {
+          "name": "GRADE_OUTCOME_PRIOR_SAMPLES",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GradeCalibration",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "GradeFriendlinessSignal",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "gradeOutcomeSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GradeScale",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "GradeSignalPart",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GradeStatistics",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "gradeTextSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "gradeToFriendliness",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/grade.ts"
+        },
+        {
+          "name": "GradeValidity",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "isAliasMethod",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "isPlaceholder",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "isRemovableQualifier",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "LEGACY_METRIC_TO_ASPECT",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "LexiconEntry",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "longestCommonSubstringRatio",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        },
+        {
+          "name": "malformedTeacherRatio",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "matchCourse",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchCourses",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchedProviders",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "MatchMethod",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "MatchResult",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "meanSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "meanSignalToScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "METRIC_KEYS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "MetricEvidence",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "metricLabel",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "NEUTRAL_SCORE",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "normalizeAspectPreferences",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "normalizeCourseCode",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "normalizeCourseName",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "normalizeCourseNameDetailed",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "NormalizedCourse",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "NormalizedName",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "normalizePreferences",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "normalizeTeacherName",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "PageIdentity",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "parseIntOrUndefined",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "parseNumberOrUndefined",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "Polarity",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "ProviderId",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "qualifiersConflict",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "RANKABLE_ASPECTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "rankCourses",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "RankingPreferences",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "RawReviewRow",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "readCredits",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "readSchedule",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "readSeatCell",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "Recommendation",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "RecommendationResult",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "REMOVABLE_QUALIFIERS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "resolveAliasUniquely",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "REVIEW_COUNT_SATURATION",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "REVIEW_MATCH_THRESHOLD",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "ReviewAspects",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "ReviewConfidence",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "reviewCountScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "ReviewMetricKey",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ReviewStats",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "safeTeacherVariants",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "scoreAspectReviews",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "ScoreComponent",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "SeatReading",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "SIGNAL_UNIT",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "significantQualifier",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "Strength",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "STRENGTH_WEIGHT",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "tallyExamFormats",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "TEACHER_ALIAS_MAP",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "teacherAgreement",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "TeacherCandidate",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "teacherKeys",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "teachersMatch",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "TeacherValidity",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "tierOf",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "WEIGHTABLE_ASPECTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "withGradeSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./aspects",
+      "specifier": "@course-copilot/core/aspects",
+      "kind": "domain",
+      "source": "packages/core/src/aspects/index.ts",
+      "count": 30,
+      "runtimeCount": 16,
+      "typeOnlyCount": 14,
+      "exports": [
+        {
+          "name": "analyzeAspects",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "ASPECT_KEYS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectAnalysis",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectBreakdown",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectDecision",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectKey",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectMention",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "aspectScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "AspectScore",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "combineGradeSignals",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "EXAM_FORMATS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "ExamFormat",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "GRADE_OUTCOME_PRIOR_SAMPLES",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GradeCalibration",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "GradeFriendlinessSignal",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "gradeOutcomeSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GradeSignalPart",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "gradeTextSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "gradeToFriendliness",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/grade.ts"
+        },
+        {
+          "name": "LexiconEntry",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "meanSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "meanSignalToScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "Polarity",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "ReviewAspects",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "scoreAspectReviews",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "SIGNAL_UNIT",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "Strength",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "STRENGTH_WEIGHT",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "tallyExamFormats",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "withGradeSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./course",
+      "specifier": "@course-copilot/core/course",
+      "kind": "domain",
+      "source": "packages/core/src/types/course.ts",
+      "count": 29,
+      "runtimeCount": 2,
+      "typeOnlyCount": 27,
+      "exports": [
+        {
+          "name": "AdapterId",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ALIAS_METHODS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "Availability",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "CleanReview",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ConfidenceTier",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "CourseLevelReview",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "CourseReview",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "CourseScore",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "EligibilityDecision",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "GradeScale",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "GradeStatistics",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "GradeValidity",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "isAliasMethod",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "MatchMethod",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "MatchResult",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "MetricEvidence",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "NormalizedCourse",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "PageIdentity",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ProviderId",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "RankingPreferences",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "RawReviewRow",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "Recommendation",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "RecommendationResult",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ReviewConfidence",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ReviewMetricKey",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ReviewStats",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "ScoreComponent",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "TeacherCandidate",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        },
+        {
+          "name": "TeacherValidity",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/types/course.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./similarity",
+      "specifier": "@course-copilot/core/similarity",
+      "kind": "domain",
+      "source": "packages/core/src/similarity.ts",
+      "count": 4,
+      "runtimeCount": 4,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "bigrams",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        },
+        {
+          "name": "diceCoefficient",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        },
+        {
+          "name": "fuzzyNameScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        },
+        {
+          "name": "longestCommonSubstringRatio",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/similarity.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./eligibility",
+      "specifier": "@course-copilot/core/eligibility",
+      "kind": "domain",
+      "source": "packages/core/src/eligibility.ts",
+      "count": 3,
+      "runtimeCount": 3,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "availabilityFromSeats",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/eligibility.ts"
+        },
+        {
+          "name": "evaluateEligibility",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/eligibility.ts"
+        },
+        {
+          "name": "filterEligible",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/eligibility.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./aspects/scoring",
+      "specifier": "@course-copilot/core/aspects/scoring",
+      "kind": "domain (precise subpath)",
+      "source": "packages/core/src/aspects/scoring.ts",
+      "count": 7,
+      "runtimeCount": 7,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "analyzeAspects",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "aspectScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "meanSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "meanSignalToScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "scoreAspectReviews",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "SIGNAL_UNIT",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        },
+        {
+          "name": "tallyExamFormats",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/scoring.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./aspects/lexicon",
+      "specifier": "@course-copilot/core/aspects/lexicon",
+      "kind": "domain (precise subpath)",
+      "source": "packages/core/src/aspects/lexicon.ts",
+      "count": 3,
+      "runtimeCount": 2,
+      "typeOnlyCount": 1,
+      "exports": [
+        {
+          "name": "ASPECT_LEXICON",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/lexicon.ts"
+        },
+        {
+          "name": "EXAM_FORMAT_PATTERNS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/lexicon.ts"
+        },
+        {
+          "name": "ExamFormatPattern",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/lexicon.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./aspects/negation",
+      "specifier": "@course-copilot/core/aspects/negation",
+      "kind": "domain (precise subpath)",
+      "source": "packages/core/src/aspects/negation.ts",
+      "count": 4,
+      "runtimeCount": 3,
+      "typeOnlyCount": 1,
+      "exports": [
+        {
+          "name": "applyNegation",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/negation.ts"
+        },
+        {
+          "name": "detectNegation",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/negation.ts"
+        },
+        {
+          "name": "NEGATION_EXCEPTIONS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/negation.ts"
+        },
+        {
+          "name": "NegationCheck",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/negation.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./aspects/extractor",
+      "specifier": "@course-copilot/core/aspects/extractor",
+      "kind": "domain (precise subpath)",
+      "source": "packages/core/src/aspects/extractor.ts",
+      "count": 7,
+      "runtimeCount": 7,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "analyzeReviewRows",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/extractor.ts"
+        },
+        {
+          "name": "analyzeReviewRowsDetailed",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/extractor.ts"
+        },
+        {
+          "name": "detectExamFormat",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/extractor.ts"
+        },
+        {
+          "name": "extractMentions",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/extractor.ts"
+        },
+        {
+          "name": "extractReviewAspects",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/extractor.ts"
+        },
+        {
+          "name": "LEXICON_INDEX",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/extractor.ts"
+        },
+        {
+          "name": "normalizeReviewText",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/extractor.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./aspects/grade",
+      "specifier": "@course-copilot/core/aspects/grade",
+      "kind": "domain (precise subpath, also in the barrel)",
+      "source": "packages/core/src/aspects/grade.ts",
+      "count": 1,
+      "runtimeCount": 1,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "gradeToFriendliness",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/grade.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./aspects/gradeSignal",
+      "specifier": "@course-copilot/core/aspects/gradeSignal",
+      "kind": "domain (precise subpath, also in the barrel)",
+      "source": "packages/core/src/aspects/gradeSignal.ts",
+      "count": 7,
+      "runtimeCount": 5,
+      "typeOnlyCount": 2,
+      "exports": [
+        {
+          "name": "combineGradeSignals",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GRADE_OUTCOME_PRIOR_SAMPLES",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GradeFriendlinessSignal",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "gradeOutcomeSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "GradeSignalPart",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "gradeTextSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        },
+        {
+          "name": "withGradeSignal",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/gradeSignal.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./parse",
+      "specifier": "@course-copilot/core/parse",
+      "kind": "domain",
+      "source": "packages/core/src/parse.ts",
+      "count": 9,
+      "runtimeCount": 8,
+      "typeOnlyCount": 1,
+      "exports": [
+        {
+          "name": "chineseNumeralToNumber",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "cleanCell",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "isPlaceholder",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "parseIntOrUndefined",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "parseNumberOrUndefined",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "readCredits",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "readSchedule",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "readSeatCell",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/parse.ts"
+        },
+        {
+          "name": "SeatReading",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/parse.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./normalize",
+      "specifier": "@course-copilot/core/normalize",
+      "kind": "domain",
+      "source": "packages/core/src/normalize.ts",
+      "count": 5,
+      "runtimeCount": 4,
+      "typeOnlyCount": 1,
+      "exports": [
+        {
+          "name": "courseNameKeys",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "normalizeCourseName",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "normalizeCourseNameDetailed",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "NormalizedName",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/normalize.ts"
+        },
+        {
+          "name": "normalizeTeacherName",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/normalize.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./alias",
+      "specifier": "@course-copilot/core/alias",
+      "kind": "domain",
+      "source": "packages/core/src/alias.ts",
+      "count": 13,
+      "runtimeCount": 10,
+      "typeOnlyCount": 3,
+      "exports": [
+        {
+          "name": "AliasAmbiguity",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "CourseAlias",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "courseAliases",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "CourseAliasResult",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "isRemovableQualifier",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "qualifiersConflict",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "REMOVABLE_QUALIFIERS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "resolveAliasUniquely",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "safeTeacherVariants",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "significantQualifier",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "TEACHER_ALIAS_MAP",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "teacherKeys",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        },
+        {
+          "name": "teachersMatch",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/alias.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./config",
+      "specifier": "@course-copilot/core/config",
+      "kind": "domain (algorithm tuning)",
+      "source": "packages/core/src/config.ts",
+      "count": 9,
+      "runtimeCount": 9,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "CONFIDENCE_ALIAS_PENALTY",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_FALLBACK_PENALTY",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_HIGH",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_MEDIUM",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "CONFIDENCE_WEIGHTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "EVIDENCE_GATE_SATURATION",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "METRIC_KEYS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "REVIEW_COUNT_SATURATION",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        },
+        {
+          "name": "REVIEW_MATCH_THRESHOLD",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/config.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./confidence",
+      "specifier": "@course-copilot/core/confidence",
+      "kind": "domain (algorithm)",
+      "source": "packages/core/src/confidence.ts",
+      "count": 5,
+      "runtimeCount": 5,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "calculateReviewConfidence",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "malformedTeacherRatio",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "reviewCountScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "teacherAgreement",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        },
+        {
+          "name": "tierOf",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/confidence.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./matching",
+      "specifier": "@course-copilot/core/matching",
+      "kind": "domain (barrel)",
+      "source": "packages/core/src/matching/index.ts",
+      "count": 5,
+      "runtimeCount": 4,
+      "typeOnlyCount": 1,
+      "exports": [
+        {
+          "name": "CourseMatcher",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchCourse",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchCourses",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchedProviders",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "normalizeCourseCode",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./matching/courseMatcher",
+      "specifier": "@course-copilot/core/matching/courseMatcher",
+      "kind": "domain (precise subpath)",
+      "source": "packages/core/src/matching/courseMatcher.ts",
+      "count": 5,
+      "runtimeCount": 4,
+      "typeOnlyCount": 1,
+      "exports": [
+        {
+          "name": "CourseMatcher",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchCourse",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchCourses",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "matchedProviders",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        },
+        {
+          "name": "normalizeCourseCode",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/matching/courseMatcher.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./recommendation",
+      "specifier": "@course-copilot/core/recommendation",
+      "kind": "domain (decision layer)",
+      "source": "packages/core/src/recommendation.ts",
+      "count": 17,
+      "runtimeCount": 14,
+      "typeOnlyCount": 3,
+      "exports": [
+        {
+          "name": "ASPECT_KEYS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "ASPECT_PRESETS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "AspectBreakdown",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "AspectDecision",
+          "kinds": [
+            "interface"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/aspects/types.ts"
+        },
+        {
+          "name": "aspectLabel",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "aspectReliability",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "AspectWeights",
+          "kinds": [
+            "type-alias"
+          ],
+          "classification": "type-only",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "aspectWeightsFromPreferences",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "buildAspectBreakdown",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "calculateDecisionScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "decisionScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "DEFAULT_ASPECT_WEIGHTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "LEGACY_METRIC_TO_ASPECT",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "NEUTRAL_SCORE",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "normalizeAspectPreferences",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "RANKABLE_ASPECTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        },
+        {
+          "name": "WEIGHTABLE_ASPECTS",
+          "kinds": [
+            "const"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/recommendation.ts"
+        }
+      ]
+    },
+    {
+      "subpath": "./ranking",
+      "specifier": "@course-copilot/core/ranking",
+      "kind": "domain (scoring layer)",
+      "source": "packages/core/src/ranking.ts",
+      "count": 7,
+      "runtimeCount": 7,
+      "typeOnlyCount": 0,
+      "exports": [
+        {
+          "name": "buildReasons",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "calculateCourseScore",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "clampMetric",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "compareScores",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "metricLabel",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "normalizePreferences",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        },
+        {
+          "name": "rankCourses",
+          "kinds": [
+            "function"
+          ],
+          "classification": "runtime",
+          "declaration": "packages/core/src/ranking.ts"
+        }
+      ]
+    }
+  ],
+  "declaredSubpaths": [
+    ".",
+    "./alias",
+    "./aspects",
+    "./aspects/extractor",
+    "./aspects/grade",
+    "./aspects/gradeSignal",
+    "./aspects/lexicon",
+    "./aspects/negation",
+    "./aspects/scoring",
+    "./confidence",
+    "./config",
+    "./course",
+    "./eligibility",
+    "./matching",
+    "./matching/courseMatcher",
+    "./normalize",
+    "./package.json",
+    "./parse",
+    "./ranking",
+    "./recommendation",
+    "./similarity"
+  ],
+  "collisionAudit": {
+    "collisions": [],
+    "expectedAggregation": [
+      {
+        "name": "analyzeAspects",
+        "between": [
+          "./aspects",
+          "./aspects/scoring"
+        ]
+      },
+      {
+        "name": "aspectScore",
+        "between": [
+          "./aspects",
+          "./aspects/scoring"
+        ]
+      },
+      {
+        "name": "meanSignal",
+        "between": [
+          "./aspects",
+          "./aspects/scoring"
+        ]
+      },
+      {
+        "name": "meanSignalToScore",
+        "between": [
+          "./aspects",
+          "./aspects/scoring"
+        ]
+      },
+      {
+        "name": "scoreAspectReviews",
+        "between": [
+          "./aspects",
+          "./aspects/scoring"
+        ]
+      },
+      {
+        "name": "SIGNAL_UNIT",
+        "between": [
+          "./aspects",
+          "./aspects/scoring"
+        ]
+      },
+      {
+        "name": "tallyExamFormats",
+        "between": [
+          "./aspects",
+          "./aspects/scoring"
+        ]
+      },
+      {
+        "name": "gradeToFriendliness",
+        "between": [
+          "./aspects",
+          "./aspects/grade"
+        ]
+      },
+      {
+        "name": "combineGradeSignals",
+        "between": [
+          "./aspects",
+          "./aspects/gradeSignal"
+        ]
+      },
+      {
+        "name": "GRADE_OUTCOME_PRIOR_SAMPLES",
+        "between": [
+          "./aspects",
+          "./aspects/gradeSignal"
+        ]
+      },
+      {
+        "name": "GradeFriendlinessSignal",
+        "between": [
+          "./aspects",
+          "./aspects/gradeSignal"
+        ]
+      },
+      {
+        "name": "gradeOutcomeSignal",
+        "between": [
+          "./aspects",
+          "./aspects/gradeSignal"
+        ]
+      },
+      {
+        "name": "GradeSignalPart",
+        "between": [
+          "./aspects",
+          "./aspects/gradeSignal"
+        ]
+      },
+      {
+        "name": "gradeTextSignal",
+        "between": [
+          "./aspects",
+          "./aspects/gradeSignal"
+        ]
+      },
+      {
+        "name": "withGradeSignal",
+        "between": [
+          "./aspects",
+          "./aspects/gradeSignal"
+        ]
+      },
+      {
+        "name": "CourseMatcher",
+        "between": [
+          "./matching",
+          "./matching/courseMatcher"
+        ]
+      },
+      {
+        "name": "matchCourse",
+        "between": [
+          "./matching",
+          "./matching/courseMatcher"
+        ]
+      },
+      {
+        "name": "matchCourses",
+        "between": [
+          "./matching",
+          "./matching/courseMatcher"
+        ]
+      },
+      {
+        "name": "matchedProviders",
+        "between": [
+          "./matching",
+          "./matching/courseMatcher"
+        ]
+      },
+      {
+        "name": "normalizeCourseCode",
+        "between": [
+          "./matching",
+          "./matching/courseMatcher"
+        ]
+      },
+      {
+        "name": "ASPECT_KEYS",
+        "between": [
+          "./aspects",
+          "./recommendation"
+        ]
+      },
+      {
+        "name": "AspectBreakdown",
+        "between": [
+          "./aspects",
+          "./recommendation"
+        ]
+      },
+      {
+        "name": "AspectDecision",
+        "between": [
+          "./aspects",
+          "./recommendation"
+        ]
+      }
+    ],
+    "missingFromRoot": [],
+    "rootOnly": [],
+    "clean": true
+  },
+  "exportsMapProblems": []
+}

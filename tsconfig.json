@@ -1,0 +1,29 @@
+{
+  /*
+   * The repository-wide type check: the Node-side sources plus every test.
+   *
+   * ## Why this config needs the DOM library
+   *
+   * UPDATED IN 16J-PREUI-E4-C2-B3-B2. It inherited `lib: ["ES2023"]` from the base config, which was right while nothing it covered touched a browser API. The
+   * tests now import extension sources directly — eighteen of them do, for the row scanner, the memory cache, the recommendation runtime and the panel modules —
+   * and the panel's card renderer is written against `document` and `HTMLElement`.
+   *
+   * The alternative was to exclude `apps/`, and that is wrong: these tests are type-checked against the very files they exercise, so excluding the extension would
+   * silently drop that half of the program from the check rather than move it. Adding the DOM library keeps every file in one program.
+   *
+   * ## Why the extension's own config is still the stricter one
+   *
+   * `apps/extension/tsconfig.json` sets `types: []` deliberately, so Node's globals cannot leak into browser code and compile against `node:fs`. That restriction
+   * lives there and is unaffected: it is the config that defines what the EXTENSION may reference. This config exists to check the tests, which run under Node and
+   * legitimately hold both worlds — a Node test harness driving a browser module.
+   */
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": ".",
+    "lib": ["ES2023", "DOM"],
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["dist", "packages"]
+}

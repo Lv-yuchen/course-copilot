@@ -1,0 +1,33 @@
+{
+  "name": "@course-copilot/recommendation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser-safe recommendation orchestration for course-selection-copilot. Host-policy agnostic: it owns no policy values and receives them from its host. Host-free — no Node, no filesystem, no DSH.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@course-copilot/core": "workspace:*",
+    "@course-copilot/provider": "workspace:*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.11"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Course Copilot",
+  "version": "1.0.0",
+  "description": "武汉大学自主选课助手：用当前可选课程与公开学生评价，按可调偏好给出确定性推荐。不选课、不退课、不提交。",
+  "permissions": ["sidePanel"],
+  "host_permissions": ["https://whucourses.cn/*"],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://jwgl.whu.edu.cn/xsxk/zzxkyzb_cxZzxkYzbIndex.html*"],
+      "js": ["content/content-script.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "action": {
+    "default_title": "Course Copilot"
+  }
+}

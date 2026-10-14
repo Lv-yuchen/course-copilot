@@ -1,0 +1,219 @@
+<!--
+  Synthetic ZFTAL selection page — same structure as the live WHU 自主选课 page, invented data.
+
+  ## Why synthetic
+
+  The first version of this fixture was a raw capture of the live page. It was removed: it contained a
+  real student id, a personal mobile number and a QQ group number from a course remark. A committed
+  fixture must not carry anyone's data, including the author's own.
+
+  ## What is faithful to the real page
+
+  Every class name and nesting level below was taken from a live capture, not guessed:
+
+    div.panel.panel-info                     one per course
+      div.panel-heading.kc_head              onclick handler in the real page
+        h3.panel-title > span.kcmc           course heading
+        input[name=kch_id]                   course code
+        input[name=czzt]                     0 = class row not yet hydrated, 1 = hydrated
+      div.panel-body.table-responsive
+        table
+          tr                                 header row (11 visible columns)
+          tr.body_tr                         one teaching class
+            td (style=display:none) x 13     jxb_id, do_jxb_id, kch_id, jxbzls, jxbxf, ...
+            td.jxbmc td.jsxmzc td.sksj ...   the visible columns
+
+  ## What the two rows below are for
+
+  Course 1 is **hydrated** (`czzt=1`): teacher and schedule cells are filled.
+  Course 2 is a **skeleton** (`czzt=0`): the row exists but teacher/schedule are empty, and the counts
+  cell holds the placeholder shape `0 / selected / remaining` measured on the live page.
+
+  Both shapes must be read correctly, and neither may be invented into the other — that distinction is the
+  single most important thing this fixture protects.
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>自主选课</title></head>
+<body>
+<div id="innerContainer" class="innerContainer">
+  <div id="searchBox">
+    <input type="hidden" id="rwlx" name="rwlx" value="2">
+    <input type="hidden" id="xkxnm" name="xkxnm" value="2026">
+    <input type="hidden" id="kklxdm" name="kklxdm" value="10">
+  </div>
+
+  <div id="contentBox">
+    <div id="hintsdiv"></div>
+    <div class="tjxk_list" style="margin-top:-30px">
+      <h4 class="tjxk_title"></h4>
+
+      <!-- Course 1: hydrated class row (czzt=1) -->
+      <div class="panel panel-info">
+        <div class="panel-heading kc_head" onclick="loadJxbxxZzxk(this)">
+          <h3 class="panel-title">
+            <span class="kcmc" id="kcmc_TEST0001">(2999000000001) 示例课程甲 - 2.0 学分教学班个数：1状态：未选</span>
+            <span class="expand_close expand1">展开</span>
+            <input type="hidden" name="kch_id" value="2999000000001">
+            <input type="hidden" name="czzt" value="1">
+            <input type="hidden" name="cxbj" value="0">
+          </h3>
+        </div>
+        <div class="panel-body table-responsive" style="display: none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>教学班</th><th>上课教师</th><th>上课时间</th><th>教学地点</th><th>开课学院</th>
+                <th>学部</th><th>选课备注</th><th>所属领域</th><th>课程类别</th>
+                <th>容量 / 余量 / 本轮已选</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="body_tr" id="tr_TESTJXB0001">
+                <td style="display:none">TESTJXB0001</td>
+                <td style="display:none" class="do_jxb_id">TESTDOJXB0001</td>
+                <td style="display:none" class="kch_id">2999000000001</td>
+                <td style="display:none" class="jxbzls">1</td>
+                <td style="display:none" class="jxbxf">2</td>
+                <td style="display:none" class="kklxdm">10</td>
+                <td style="display:none" class="jxbzb">undefined</td>
+                <td style="display:none" class="zcongbj">0</td>
+                <td style="display:none" class="zhiyuan">0</td>
+                <td style="display:none" class="xqh_id">4</td>
+                <td style="display:none" class="jsxm">示例教师甲、示例教师乙</td>
+                <td style="display:none" class="jszc">教授、讲师</td>
+                <td style="display:none" class="zjxbxx"></td>
+                <td class="jxbmc">(2026-2027-1)-2999000000001-01</td>
+                <td class="jsxmzc">【 示例教师甲 、 示例教师乙 】 教授、讲师</td>
+                <td class="sksj">星期一第1-2节{1-16周}</td>
+                <td class="jxdd">1区A101</td>
+                <td class="kkxymc">示例学院</td>
+                <td class="yqumc">1区</td>
+                <td class="xkbz"></td>
+                <td class="kcgs">示例领域</td>
+                <td class="kclb">核心课程</td>
+                <td class="full" style="display:none">已满</td>
+                <td style="display:none" class="rsxx"><font class="jxbrs">40</font>/<font class="jxbrl">40</font></td>
+                <td class="wdrsxx" style="display:none"><font class="jxbzrl">40</font>/<font class="blzyl">27</font>/<font class="blyxrs">13</font></td>
+                <td class="an">选课</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Course 2: skeleton class row (czzt=0) — teacher and schedule genuinely absent -->
+      <div class="panel panel-info">
+        <div class="panel-heading kc_head" onclick="loadJxbxxZzxk(this)">
+          <h3 class="panel-title">
+            <span class="kcmc" id="kcmc_TEST0002">(2999000000002) 示例课程乙 - 1.5 学分教学班个数：1状态：未选</span>
+            <span class="expand_close expand1">展开</span>
+            <input type="hidden" name="kch_id" value="2999000000002">
+            <input type="hidden" name="czzt" value="0">
+            <input type="hidden" name="cxbj" value="0">
+          </h3>
+        </div>
+        <div class="panel-body table-responsive" style="display: none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>教学班</th><th>上课教师</th><th>上课时间</th><th>教学地点</th><th>开课学院</th>
+                <th>学部</th><th>选课备注</th><th>所属领域</th><th>课程类别</th>
+                <th>容量 / 余量 / 本轮已选</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="body_tr" id="tr_TESTJXB0002">
+                <td style="display:none">TESTJXB0002</td>
+                <td style="display:none" class="do_jxb_id"></td>
+                <td style="display:none" class="kch_id">2999000000002</td>
+                <td style="display:none" class="jxbzls">1</td>
+                <td style="display:none" class="jxbxf">1.5</td>
+                <td style="display:none" class="kklxdm">10</td>
+                <td style="display:none" class="jxbzb">undefined</td>
+                <td style="display:none" class="zcongbj">0</td>
+                <td style="display:none" class="zhiyuan">0</td>
+                <td style="display:none" class="xqh_id"></td>
+                <td style="display:none" class="jsxm"></td>
+                <td style="display:none" class="jszc"></td>
+                <td style="display:none" class="zjxbxx"></td>
+                <td class="jxbmc">(2026-2027-1)-2999000000002-01</td>
+                <td class="jsxmzc"></td>
+                <td class="sksj"></td>
+                <td class="jxdd"></td>
+                <td class="kkxymc"></td>
+                <td class="yqumc"></td>
+                <td class="xkbz"></td>
+                <td class="kcgs"></td>
+                <td class="kclb"></td>
+                <td class="full" style="display:none">已满</td>
+                <td style="display:none" class="rsxx"><font class="jxbrs">50</font>/<font class="jxbrl">0</font></td>
+                <td class="wdrsxx"><font class="jxbzrl">0</font>/<font class="blzyl">50</font>/<font class="blyxrs">21</font></td>
+                <td class="an">选课</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Course 3: hydrated AND full, to cover the visible 已满 marker -->
+      <div class="panel panel-info">
+        <div class="panel-heading kc_head" onclick="loadJxbxxZzxk(this)">
+          <h3 class="panel-title">
+            <span class="kcmc" id="kcmc_TEST0003">(2999000000003) 示例课程丙 - 3.0 学分教学班个数：1状态：未选</span>
+            <span class="expand_close close1">关闭</span>
+            <input type="hidden" name="kch_id" value="2999000000003">
+            <input type="hidden" name="czzt" value="1">
+            <input type="hidden" name="cxbj" value="0">
+          </h3>
+        </div>
+        <div class="panel-body table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>教学班</th><th>上课教师</th><th>上课时间</th><th>教学地点</th><th>开课学院</th>
+                <th>学部</th><th>选课备注</th><th>所属领域</th><th>课程类别</th>
+                <th>容量 / 余量 / 本轮已选</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="body_tr" id="tr_TESTJXB0003">
+                <td style="display:none">TESTJXB0003</td>
+                <td style="display:none" class="do_jxb_id">TESTDOJXB0003</td>
+                <td style="display:none" class="kch_id">2999000000003</td>
+                <td style="display:none" class="jxbzls">1</td>
+                <td style="display:none" class="jxbxf">3.0</td>
+                <td style="display:none" class="kklxdm">10</td>
+                <td style="display:none" class="jxbzb">undefined</td>
+                <td style="display:none" class="zcongbj">0</td>
+                <td style="display:none" class="zhiyuan">0</td>
+                <td style="display:none" class="xqh_id">1</td>
+                <td style="display:none" class="jsxm">示例教师丙</td>
+                <td style="display:none" class="jszc">副教授</td>
+                <td style="display:none" class="zjxbxx"></td>
+                <td class="jxbmc">(2026-2027-1)-2999000000003-01</td>
+                <td class="jsxmzc">【 示例教师丙 】 副教授</td>
+                <td class="sksj">星期三第5-6节{1-8周} 星期五第3-4节{9-16周}</td>
+                <td class="jxdd">2区B203</td>
+                <td class="kkxymc">示例学院</td>
+                <td class="yqumc">2区</td>
+                <td class="xkbz">备注示例文本</td>
+                <td class="kcgs">示例领域</td>
+                <td class="kclb">选修课程</td>
+                <td class="full">已满</td>
+                <td style="display:none" class="rsxx"><font class="jxbrs">30</font>/<font class="jxbrl">30</font></td>
+                <td class="wdrsxx" style="display:none"><font class="jxbzrl">30</font>/<font class="blzyl">0</font>/<font class="blyxrs">30</font></td>
+                <td class="an">选课</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Empty scaffold panel above the list, exactly as the live page has -->
+      <div class="panel panel-info"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

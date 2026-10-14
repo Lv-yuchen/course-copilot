@@ -1,0 +1,596 @@
+/*
+ * Minimal styling for the side panel.
+ *
+ * Colours come from the browser's own theme variables with light fallbacks, so the panel follows the user's dark or light
+ * setting instead of forcing one. The panel is a narrow docked surface, so the layout is a single column with no fixed
+ * widths.
+ *
+ * The two status wordings are distinguished by colour as well as text: an unrecognised page is neutral rather than red,
+ * because most of the time the user is simply on some other page and that is not an error.
+ */
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--panel-foreground, #1b1b1b);
+  background: var(--panel-background, #ffffff);
+}
+
+.panel {
+  padding: 16px;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.panel-subtitle {
+  margin: 2px 0 16px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.panel-status {
+  margin: 0 0 16px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  /* Neutral by default: "no supported page" is an ordinary state, not a failure. */
+  background: var(--panel-status-idle-background, rgba(128, 128, 128, 0.12));
+  color: var(--panel-status-idle-foreground, #4a4a4a);
+}
+
+.panel-status-supported {
+  background: var(--panel-status-ok-background, rgba(16, 122, 60, 0.1));
+  color: var(--panel-status-ok-foreground, #0f6b34);
+}
+
+.panel-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 12px;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--panel-border, rgba(128, 128, 128, 0.25));
+  font-size: 12px;
+}
+
+.panel-facts dt {
+  opacity: 0.7;
+}
+
+.panel-facts dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--panel-foreground, #e8e8e8);
+    background: var(--panel-background, #1f1f1f);
+  }
+
+  .panel-status {
+    color: var(--panel-status-idle-foreground, #b8b8b8);
+  }
+
+  .panel-status-supported {
+    background: var(--panel-status-ok-background, rgba(46, 160, 90, 0.16));
+    color: var(--panel-status-ok-foreground, #7fd39b);
+  }
+}
+.panel-count {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.panel-count[hidden] {
+  display: none;
+}
+
+/*
+ * REMOVED IN PRE-RELEASE-UX-A14: the four rules that used to style the development diagnostic block — its section, its heading, its list and its empty line.
+ *
+ * They were left out rather than kept "in case": markup that cannot be reached does not need presentation, and a leftover stylesheet rule is how a removed feature
+ * quietly comes back. The class names are deliberately not repeated here, because a check scans this file for them and comments are source.
+ */
+
+/*
+ * The approved auto-load control.
+ *
+ * A separator above it, because it is a distinct capability rather than another fact about the page, and modest styling: the notice that this button
+ * clicks something on the user's page belongs beside it, not hidden behind a disclosure.
+ */
+.panel-autoload {
+  margin: 0 0 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--panel-border, rgba(128, 128, 128, 0.25));
+}
+
+.panel-autoload-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.panel-autoload-note {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.panel-autoload-message {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+.panel-autoload-message[hidden] {
+  display: none;
+}
+
+.panel-autoload-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.panel-autoload-cancel[hidden] {
+  display: none;
+}
+
+/*
+ * The recommendation result area.
+ *
+ * A status and a summary, deliberately without course cards: this area answers "what happened" and "what did the run learn", and the presentation of an individual
+ * course is a separate concern with its own disclosure needs.
+ */
+.panel-recommendation {
+  margin: 0 0 16px;
+  padding: 12px;
+  border: 1px solid #d8dde5;
+  border-radius: 8px;
+}
+
+.panel-recommendation[hidden] {
+  display: none;
+}
+
+.panel-recommendation-title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.panel-recommendation-message {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.panel-recommendation-message[hidden] {
+  display: none;
+}
+
+/*
+ * The persistent qualifications. Visually distinct from the message line because they stay on screen BESIDE a summary rather than being replaced by it: they
+ * qualify every figure below them for as long as their condition holds.
+ */
+.panel-recommendation-warning {
+  margin: 0 0 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7a5b16;
+}
+
+.panel-recommendation-warning[hidden] {
+  display: none;
+}
+
+.panel-recommendation-counts {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  margin: 0;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.panel-recommendation-counts[hidden] {
+  display: none;
+}
+
+.panel-recommendation-counts dt {
+  color: #4a5461;
+}
+
+.panel-recommendation-counts dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+}
+
+.panel-recommendation-empty {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.panel-recommendation-empty[hidden] {
+  display: none;
+}
+/*
+ * The course cards.
+ *
+ * Three sections rather than one list: the three kinds carry different fields, and a shared card shape would invite inventing the ones an entry does not have.
+ * Everything here is presentation only — there are no controls inside a card, because the extension performs no course operation.
+ */
+.panel-cards {
+  margin: 12px 0 0;
+}
+
+.panel-cards[hidden] {
+  display: none;
+}
+
+.panel-cards-title {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5461;
+}
+
+/*
+ * The rated section's collapse control.
+ *
+ * It replaces the plain heading, so it carries the heading's typography and adds only what a control needs: a full-width hit area, a pointer, and a visible focus
+ * ring — the section holds about 133 cards on a real result, and a control that is hard to hit or invisible when focused would make them hard to reach.
+ *
+ * The state is stated in `aria-expanded` and, for a sighted reader, by the count and the disclosure mark on the right; it is deliberately not conveyed by the
+ * triangle alone.
+ */
+.panel-cards-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  margin: 0 0 6px;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5461;
+  text-align: left;
+  cursor: pointer;
+}
+
+.panel-cards-toggle:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.panel-cards-toggle-count {
+  font-weight: 400;
+  color: #6b7480;
+}
+
+/* The disclosure mark sits at the far right, so the label and count read as one line. */
+.panel-cards-toggle::after {
+  content: '▾';
+  margin-left: auto;
+  font-size: 10px;
+  color: #6b7480;
+}
+
+.panel-cards-toggle[aria-expanded="false"]::after {
+  content: '▸';
+}
+
+.panel-cards-toggle[aria-expanded="true"]::after {
+  content: '▾';
+}
+
+/* The cards container is hidden while collapsed; the header and its control stay visible. */
+#rated-cards[hidden] {
+  display: none;
+}
+
+/*
+ * The per-card student-review module.
+ *
+ * PRE-RELEASE-UX-A17. Restrained on purpose: no sentiment colour, no positive/negative marking, no stars and no score badge. A comment is
+ * displayed as text and nothing here classifies it, because this product does not judge individual students' opinions — it shows them.
+ */
+.course-card-reviews {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--panel-border, rgba(128, 128, 128, 0.18));
+}
+
+/* A real button, so it is keyboard reachable; the mark is decoration beside a worded label, never the only signal. */
+.course-card-reviews-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 12px;
+  color: #1d4ed8;
+  text-align: left;
+  cursor: pointer;
+}
+
+.course-card-reviews-toggle:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.course-card-reviews-toggle::after {
+  content: '▾';
+  margin-left: auto;
+  font-size: 10px;
+  color: #6b7480;
+}
+
+.course-card-reviews-toggle[aria-expanded="false"]::after {
+  content: '▸';
+}
+
+.course-card-reviews-toggle[aria-expanded="true"]::after {
+  content: '▾';
+}
+
+.course-card-reviews-list[hidden] {
+  display: none;
+}
+
+.course-card-reviews-list {
+  margin-top: 4px;
+}
+
+/* One comment per block, separated so two quotations cannot read as one. */
+.course-card-review + .course-card-review {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--panel-border, rgba(128, 128, 128, 0.18));
+}
+
+/*
+ * The provenance label is visually SECONDARY to the words it introduces: a reader must see whose opinion this is, and must not mistake the
+ * label for part of the comment.
+ */
+.course-card-review-label {
+  margin: 0 0 2px;
+  font-size: 11px;
+  color: #6b7480;
+}
+
+/* The student's own words, quoted as written. */
+.course-card-review-text {
+  margin: 0;
+  font-size: 12px;
+  color: #2b323c;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/*
+ * The ONE shared grade disclaimer, shown once beneath the course lists.
+ *
+ * It is deliberately quieter than the cards: it qualifies figures the reader has already seen rather than being a fact about a course, and it must not compete
+ * with them. `[hidden]` is made explicit because the renderer toggles this element and a UA default is not something a styled element should rely on.
+ */
+.panel-grade-disclaimer {
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #6b7480;
+}
+
+.panel-grade-disclaimer[hidden] {
+  display: none;
+}
+
+.course-card-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.course-card {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #e2e6ec;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.course-card-title {
+  margin: 0 0 2px;
+  font-weight: 600;
+  /* Course names are long and from the page, so they wrap rather than overflow. */
+  word-break: break-word;
+}
+
+.course-card-status {
+  margin: 0 0 6px;
+  color: #5b6472;
+}
+
+.course-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.course-card-fact {
+  margin: 0;
+  word-break: break-word;
+  font-variant-numeric: tabular-nums;
+}
+
+.course-card-label {
+  color: #6b7480;
+}
+
+/*
+ * The oversubscription warning.
+ *
+ * Red, because the product asked for a red warning, and bold on the primary sentence so the claim is prominent. The colour is EMPHASIS ONLY: the sentence already
+ * states the comparison in words, so the warning still carries its meaning with styling disabled, in a screen reader, or in a high-contrast theme. That is why
+ * there is no colour-only signal here — no red dot, no coloured border standing in for the text.
+ *
+ * A left border is used rather than a background tint: it draws the eye without reducing text contrast, and it keeps the block visually distinct from the fact rows
+ * above it without introducing a level, a meter or a badge.
+ */
+.course-card-competition-warning {
+  margin: 6px 0 0;
+  padding-left: 8px;
+  border-left: 3px solid #c02626;
+  color: #a11414;
+}
+
+.course-card-competition-warning-primary {
+  margin: 0;
+  font-weight: 700;
+}
+
+.course-card-competition-warning-note {
+  margin: 2px 0 0;
+  font-weight: 400;
+  color: #7a4a4a;
+}
+
+/*
+ * The user's importance weights.
+ *
+ * PRE-RELEASE-UX-A18. Rows rather than a table, so each control keeps its own label association and a narrow side panel can lay the four
+ * columns out without a fixed width. The percentage is deliberately the same size as the value: it is the number the user is actually
+ * choosing the effect of, not a decoration.
+ */
+.panel-preferences {
+  margin: 0 0 16px;
+}
+
+.panel-preferences-summary {
+  padding: 2px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5461;
+  cursor: pointer;
+}
+
+.panel-preferences-summary:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.panel-preferences-body {
+  padding-top: 6px;
+}
+
+.panel-preferences-note {
+  margin: 0 0 8px;
+  font-size: 11px;
+  color: #6b7480;
+}
+
+.panel-preferences-row {
+  display: grid;
+  grid-template-columns: 5.5em 1fr auto auto;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.panel-preferences-label {
+  font-size: 12px;
+  color: #2b323c;
+}
+
+/* The native control, so keyboard operation, the announced value and the touch target are the browser's rather than a reimplementation. */
+.panel-preferences-slider {
+  width: 100%;
+  accent-color: #1d4ed8;
+}
+
+.panel-preferences-value {
+  font-size: 11px;
+  color: #4a5461;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.panel-preferences-percent {
+  min-width: 3em;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1d4ed8;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The all-zero refusal. Its own row so it cannot be mistaken for one control's own note. */
+.panel-preferences-problem {
+  margin: 4px 0;
+  font-size: 11px;
+  color: #9a3412;
+}
+
+.panel-preferences-problem[hidden] {
+  display: none;
+}
+
+.panel-preferences-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.panel-preferences-reset,
+.panel-preferences-apply {
+  padding: 4px 10px;
+  border: 1px solid var(--panel-border, rgba(128, 128, 128, 0.35));
+  border-radius: 4px;
+  background: none;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.panel-preferences-apply {
+  border-color: #1d4ed8;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.panel-preferences-reset:focus-visible,
+.panel-preferences-apply:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* A disabled action must look disabled: the all-zero state is a refusal, not a silent no-op. */
+.panel-preferences-apply:disabled {
+  border-color: var(--panel-border, rgba(128, 128, 128, 0.35));
+  color: #9aa1ab;
+  cursor: not-allowed;
+}

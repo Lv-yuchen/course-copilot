@@ -1,0 +1,11 @@
+# Workspace members. The extension and its engine packages live under `packages/*`.
+packages:
+  - 'packages/*'
+
+# The only package permitted to run an install script.
+#
+# esbuild ships a platform-specific native binary that its own install script places on disk; without
+# this, the package is present but unusable. It is granted deliberately and for this package only —
+# no other dependency is allowed to execute build-time code.
+allowBuilds:
+  esbuild: true

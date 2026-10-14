@@ -1,0 +1,414 @@
+{
+  "note": "Verbatim PresentationV1 recorded by a real course_recommend run. Do not hand-edit: the regression exists because a hand-built fixture used the product key where the real payload used the engine aspect key.",
+  "callId": "call_00_XureKM27kDL3Jo7pcciZ6263",
+  "resultSeq": 5964,
+  "payload": {
+    "schema": "course-copilot.recommendation-context",
+    "version": 1,
+    "scope": {
+      "candidateScope": "unknown",
+      "source": "unknown",
+      "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+      "confirmed": false
+    },
+    "coverage": {
+      "courseCount": 10,
+      "sectionCount": 11,
+      "hydratedSectionCount": 2,
+      "ratedCourseCount": 5,
+      "insufficientDataCount": 0,
+      "exhausted": null
+    },
+    "recommendations": {
+      "visibleCount": 5,
+      "ratedButNotRecommendedCount": 5
+    },
+    "results": {
+      "recommended": [
+        {
+          "courseName": "化学与社会",
+          "rank": 1,
+          "score": 5.9481,
+          "riskAdjustedScore": 5.8814,
+          "confidence": {
+            "tier": "high",
+            "value": 0.8511,
+            "summary": "总体 0.85（high）；课程共 38 条样本；匹配度 0.78；证据量 0.80（本次计分用 32 条）；维度覆盖 1.00；教师字段可用率 1.00；缺失分量：teacherAgreement"
+          },
+          "reasons": [
+            "综合口碑较好（7.3/10）",
+            "给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8",
+            "教师评价样本较充分（本次计分 32 条）"
+          ],
+          "warnings": [
+            "课程或评价缺少教师信息，匹配仅依据课程名称",
+            "评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门",
+            "给分友好度 仅有 2 条评价提到，该维度不确定性较高"
+          ],
+          "evidenceStrength": [
+            {
+              "aspect": "gradeFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 2,
+              "corpusReviews": 32,
+              "note": "2/32 条评价提及（覆盖 6%，一致性 100%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "workloadFriendliness",
+              "level": "strong",
+              "reviewsWithEvidence": 32,
+              "corpusReviews": 32,
+              "note": "32/32 条评价提及（覆盖 100%，一致性 83%）；样本量与覆盖面都足够，结论较稳"
+            },
+            {
+              "aspect": "attendanceFriendliness",
+              "level": "strong",
+              "reviewsWithEvidence": 31,
+              "corpusReviews": 32,
+              "note": "31/32 条评价提及（覆盖 97%，一致性 94%）；样本量与覆盖面都足够，结论较稳"
+            },
+            {
+              "aspect": "studentSentiment",
+              "level": "moderate",
+              "reviewsWithEvidence": 15,
+              "corpusReviews": 32,
+              "note": "15/32 条评价提及（覆盖 47%，一致性 87%）；有参考价值，但样本仍偏少"
+            }
+          ],
+          "reviewCount": 32,
+          "competition": {
+            "roundQuota": 7,
+            "selectedThisRound": 72,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "环境与人类",
+          "rank": 2,
+          "score": 5.7339,
+          "riskAdjustedScore": 5.6604,
+          "confidence": {
+            "tier": "medium",
+            "value": 0.6858,
+            "summary": "总体 0.69（medium）；课程共 10 条样本；匹配度 0.78；证据量 0.33（本次计分用 8 条）；维度覆盖 1.00；教师字段可用率 1.00；缺失分量：teacherAgreement"
+          },
+          "reasons": [
+            "课业轻松度偏弱（3.9/10）",
+            "给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7",
+            "课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9",
+            "综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5",
+            "教师评价样本较少（本次计分 8 条），结论仅供参考"
+          ],
+          "warnings": [
+            "课程或评价缺少教师信息，匹配仅依据课程名称",
+            "评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门",
+            "给分友好度 仅有 1 条评价提到，该维度不确定性较高",
+            "综合口碑 仅有 2 条评价提到，该维度不确定性较高"
+          ],
+          "evidenceStrength": [
+            {
+              "aspect": "gradeFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 1,
+              "corpusReviews": 8,
+              "note": "1/8 条评价提及（覆盖 13%，一致性 100%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "workloadFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 8,
+              "corpusReviews": 8,
+              "note": "8/8 条评价提及（覆盖 100%，一致性 88%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "attendanceFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 7,
+              "corpusReviews": 8,
+              "note": "7/8 条评价提及（覆盖 88%，一致性 57%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "studentSentiment",
+              "level": "limited",
+              "reviewsWithEvidence": 2,
+              "corpusReviews": 8,
+              "note": "2/8 条评价提及（覆盖 25%，一致性 100%）；样本或覆盖面偏少，结论仅供参考"
+            }
+          ],
+          "reviewCount": 8,
+          "competition": {
+            "roundQuota": 9,
+            "selectedThisRound": 67,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "数据素养与数据利用",
+          "rank": 3,
+          "teacher": "刘霞、方小利",
+          "score": 5.615,
+          "riskAdjustedScore": 5.5758,
+          "confidence": {
+            "tier": "medium",
+            "value": 0.6594,
+            "summary": "总体 0.66（medium）；课程共 18 条样本；匹配度 0.97；证据量 0.48（本次计分用 13 条）；维度覆盖 0.83；教师字段可用率 1.00"
+          },
+          "reasons": [
+            "给分友好度 居中（6.5/10）",
+            "给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5",
+            "综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5",
+            "教师评价样本较充分（本次计分 13 条）"
+          ],
+          "evidenceStrength": [
+            {
+              "aspect": "gradeFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 3,
+              "corpusReviews": 13,
+              "note": "3/13 条评价提及（覆盖 23%，一致性 67%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "workloadFriendliness",
+              "level": "moderate",
+              "reviewsWithEvidence": 12,
+              "corpusReviews": 13,
+              "note": "12/13 条评价提及（覆盖 92%，一致性 96%）；有参考价值，但样本仍偏少"
+            },
+            {
+              "aspect": "attendanceFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 8,
+              "corpusReviews": 13,
+              "note": "8/13 条评价提及（覆盖 62%，一致性 88%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "studentSentiment",
+              "level": "limited",
+              "reviewsWithEvidence": 3,
+              "corpusReviews": 13,
+              "note": "3/13 条评价提及（覆盖 23%，一致性 100%）；样本或覆盖面偏少，结论仅供参考"
+            }
+          ],
+          "reviewCount": 13,
+          "competition": {
+            "roundQuota": 8,
+            "selectedThisRound": 31,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "行为健康",
+          "rank": 4,
+          "score": 5.3237,
+          "riskAdjustedScore": 5.3785,
+          "confidence": {
+            "tier": "medium",
+            "value": 0.6893,
+            "summary": "总体 0.69（medium）；课程共 13 条样本；匹配度 0.78；证据量 0.42（本次计分用 11 条）；维度覆盖 0.83；教师字段可用率 1.00；缺失分量：teacherAgreement"
+          },
+          "reasons": [
+            "综合口碑 居中（5.8/10）",
+            "给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5",
+            "教师评价样本较充分（本次计分 11 条）"
+          ],
+          "warnings": [
+            "课程或评价缺少教师信息，匹配仅依据课程名称",
+            "评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门"
+          ],
+          "evidenceStrength": [
+            {
+              "aspect": "gradeFriendliness",
+              "level": "none",
+              "reviewsWithEvidence": 0,
+              "corpusReviews": 11,
+              "note": "没有评价谈到这一维度，因此不计入排序，其权重已分配给其他维度"
+            },
+            {
+              "aspect": "workloadFriendliness",
+              "level": "moderate",
+              "reviewsWithEvidence": 11,
+              "corpusReviews": 11,
+              "note": "11/11 条评价提及（覆盖 100%，一致性 82%）；有参考价值，但样本仍偏少"
+            },
+            {
+              "aspect": "attendanceFriendliness",
+              "level": "moderate",
+              "reviewsWithEvidence": 10,
+              "corpusReviews": 11,
+              "note": "10/11 条评价提及（覆盖 91%，一致性 80%）；有参考价值，但样本仍偏少"
+            },
+            {
+              "aspect": "studentSentiment",
+              "level": "limited",
+              "reviewsWithEvidence": 9,
+              "corpusReviews": 11,
+              "note": "9/11 条评价提及（覆盖 82%，一致性 67%）；样本或覆盖面偏少，结论仅供参考"
+            }
+          ],
+          "reviewCount": 11,
+          "competition": {
+            "roundQuota": 10,
+            "selectedThisRound": 45,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "数据要素",
+          "rank": 5,
+          "score": 5.2974,
+          "riskAdjustedScore": 5.5,
+          "confidence": {
+            "tier": "low",
+            "value": 0,
+            "summary": "总体 0.00（low）；课程共 1 条样本；匹配度 0.78；证据量 0.00（本次计分用 0 条）；维度覆盖 0.33；教师字段可用率 0.00；缺失分量：evidence、teacherAgreement"
+          },
+          "reasons": [
+            "考勤宽松度 居中（6.4/10）",
+            "考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4",
+            "教师评价样本较少（本次计分 0 条），结论仅供参考",
+            "缺少可靠数据的维度：给分友好度、综合口碑"
+          ],
+          "warnings": [
+            "课程或评价缺少教师信息，匹配仅依据课程名称",
+            "评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门",
+            "评价样本仅 1 条，统计意义有限",
+            "课业轻松度 仅有 1 条评价提到，该维度不确定性较高",
+            "考勤宽松度 仅有 1 条评价提到，该维度不确定性较高"
+          ],
+          "evidenceStrength": [
+            {
+              "aspect": "gradeFriendliness",
+              "level": "none",
+              "reviewsWithEvidence": 0,
+              "corpusReviews": 1,
+              "note": "没有评价谈到这一维度，因此不计入排序，其权重已分配给其他维度"
+            },
+            {
+              "aspect": "workloadFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 1,
+              "corpusReviews": 1,
+              "note": "1/1 条评价提及（覆盖 100%，一致性 100%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "attendanceFriendliness",
+              "level": "limited",
+              "reviewsWithEvidence": 1,
+              "corpusReviews": 1,
+              "note": "1/1 条评价提及（覆盖 100%，一致性 50%）；样本或覆盖面偏少，结论仅供参考"
+            },
+            {
+              "aspect": "studentSentiment",
+              "level": "none",
+              "reviewsWithEvidence": 0,
+              "corpusReviews": 1,
+              "note": "没有评价谈到这一维度，因此不计入排序，其权重已分配给其他维度"
+            }
+          ],
+          "reviewCount": 1,
+          "competition": {
+            "roundQuota": 5,
+            "selectedThisRound": 60,
+            "source": "page_native"
+          }
+        }
+      ],
+      "ratedButNotRecommended": [
+        {
+          "courseName": "中国海洋边界问题",
+          "rank": 6,
+          "score": 5.2381,
+          "reviewCount": 8,
+          "competition": {
+            "roundQuota": 35,
+            "selectedThisRound": 34,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "商业伦理",
+          "rank": 7,
+          "score": 5.0888,
+          "reviewCount": 5,
+          "competition": {
+            "roundQuota": 4,
+            "selectedThisRound": 62,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "西方音乐史与名作赏析",
+          "rank": 8,
+          "score": 4.9679,
+          "reviewCount": 8,
+          "competition": {
+            "roundQuota": 80,
+            "selectedThisRound": 44,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "西方音乐史与名作赏析",
+          "rank": 9,
+          "score": 4.9679,
+          "reviewCount": 8,
+          "competition": {
+            "roundQuota": 33,
+            "selectedThisRound": 100,
+            "source": "page_native"
+          }
+        },
+        {
+          "courseName": "智能电网与智慧城市",
+          "rank": 10,
+          "score": 4.7836,
+          "reviewCount": 3,
+          "competition": {
+            "roundQuota": 8,
+            "selectedThisRound": 46,
+            "source": "page_native"
+          }
+        }
+      ],
+      "insufficientData": []
+    },
+    "transparency": {
+      "requestedWeights": [
+        {
+          "key": "gradeFriendliness",
+          "weight": 0.5
+        },
+        {
+          "key": "workloadFriendliness",
+          "weight": 0.3
+        },
+        {
+          "key": "attendanceFriendliness",
+          "weight": 0.15
+        },
+        {
+          "key": "studentSentiment",
+          "weight": 0.05
+        }
+      ],
+      "effectiveWeights": [
+        {
+          "key": "gradeFriendliness",
+          "weight": 0.5
+        },
+        {
+          "key": "workloadFriendliness",
+          "weight": 0.3
+        },
+        {
+          "key": "attendanceFriendliness",
+          "weight": 0.15
+        },
+        {
+          "key": "studentSentiment",
+          "weight": 0.05
+        }
+      ]
+    }
+  }
+}

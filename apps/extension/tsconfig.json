@@ -1,0 +1,60 @@
+{
+  /*
+   * Build configuration for the Course Copilot extension.
+   *
+   * ## Why this does not extend the root configuration
+   *
+   * It is deliberately self-contained. An extended config resolves its relative paths against the directory of the config
+   * that DECLARED them, so inheriting `rootDir`/`outDir` from the repository root produced `dist/src/background/...`
+   * instead of `dist/background/...` — a layout the manifest cannot reference. That was confirmed by experiment, not
+   * assumed. The extension also differs from the repository in ways a shared config cannot express:
+   *
+   * - it is a **browser** program, so `types` is empty and Node's types must not leak in — otherwise code could compile
+   *   against `node:fs` and fail at runtime in Edge;
+   * - it emits a plain **ES module** the browser loads directly, with no declarations and no source maps.
+   *
+   * The settings below intentionally mirror the repository's strictness so extension code is held to the same standard.
+   */
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM"],
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "types": [],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "rootDir": "src",
+    "outDir": "dist",
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+
+    /*
+     * TYPE CHECK ONLY.
+     *
+     * This config covers every TypeScript file in the extension — content, worker, panel, and every helper they will grow to use —
+     * and emits nothing. Production JavaScript comes from two owners instead:
+     *
+     * - `apps/extension/tsconfig.content.json` emits the content script, which must stay a CLASSIC script, and
+     * - esbuild bundles the worker and the panel, which are modules and will consume the provider package.
+     *
+     * The reason is a measured failure rather than tidiness. While this config emitted, `tsc` wrote a JavaScript file for every
+     * module it compiled, so the moment the worker imported a new local module that module appeared in `dist/background/` as a
+     * script the manifest never names. `exclude` did not help: it filters the root files `include` discovers, and a module reached
+     * through an import still joins the program. Adding one import to the worker produced `dist/background/memory-cache.js` with
+     * the file excluded.
+     */
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+}

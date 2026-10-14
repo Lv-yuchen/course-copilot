@@ -1,0 +1,1459 @@
+[
+  {
+    "callId": "call_00_kPGFVJXesY5Zt54R2WeX7939",
+    "prose": "Error: 无法获取选课页面内容：\n- cdp: 不可用（通过 Chrome DevTools Protocol 读取用户已打开标签页的 DOM（需以 --remote-debugging-port 启动浏览器））\n- file: 未提供页面文件路径，且没有配置默认快照\n- inline: 不可用（直接使用调用方传入的页面内容（粘贴的 HTML / 文本 / JSON））",
+    "contentTypes": [
+      "text"
+    ],
+    "hasPresentation": false,
+    "presentationKeys": null,
+    "presentation": null
+  },
+  {
+    "callId": "call_00_e5THzZM87EFGPqGZLuzU8289",
+    "prose": "候选 10 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用 — 决策分 5.62，可信度 medium（0.71）；余量 8\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 10,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 3
+      }
+    }
+  },
+  {
+    "callId": "call_00_O5UnKaeQiJnsDO3yzqtg4168",
+    "prose": "候选 10 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用 — 决策分 5.62，可信度 medium（0.71）；余量 8\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "available_only",
+        "source": "observed_query",
+        "statement": "学校系统当前筛选的有余量可选课程。",
+        "confirmed": true
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 10,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 3
+      }
+    }
+  },
+  {
+    "callId": "call_00_ngCWZO3X3frfQWXniQom3673",
+    "prose": "候选 15 门，排除 0 门，推荐 0 门：\n（未参与排序）任怡霏讲师：评价站点没有返回任何候选记录\n（未参与排序）余亮英讲师：评价站点没有返回任何候选记录\n（未参与排序）冯存万副教授：评价站点没有返回任何候选记录\n（未参与排序）吕梦无：评价站点没有返回任何候选记录\n（未参与排序）吴恺讲师：评价站点没有返回任何候选记录\n（未参与排序）张晔讲师：评价站点没有返回任何候选记录\n（未参与排序）未选：评价站点没有返回任何候选记录\n（未参与排序）本专业推荐课程:是：评价站点没有返回任何候选记录\n（未参与排序）李向勇教授：评价站点没有返回任何候选记录\n（未参与排序）李旭超副教授：评价站点没有返回任何候选记录\n（未参与排序）杨卫国讲师：评价站点没有返回任何候选记录\n（未参与排序）潘迎春教授：评价站点没有返回任何候选记录\n（未参与排序）王萌、姜海…教授、讲师：评价站点没有返回任何候选记录\n（未参与排序）羿旭明教授：评价站点没有返回任何候选记录\n（未参与排序）陈艳讲师：评价站点没有返回任何候选记录",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 15,
+        "sectionCount": 15,
+        "hydratedSectionCount": 0,
+        "ratedCourseCount": 0,
+        "insufficientDataCount": 15,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 0,
+        "ratedButNotRecommendedCount": 0
+      }
+    }
+  },
+  {
+    "callId": "call_00_EBGrteU0TRDcflafMA8a9078",
+    "prose": "候选 11 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用（刘霞、方小利） — 决策分 5.62，可信度 medium（0.66）；本轮余量 8\n     匹配：name_teacher（0.97）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 11,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 5
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "化学与社会",
+            "rank": 1,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 2,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据素养与数据利用",
+            "rank": 3,
+            "teacher": "刘霞、方小利",
+            "score": 5.615,
+            "riskAdjustedScore": 5.5758,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 31,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 8,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 80,
+              "selectedThisRound": 44,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 9,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 33,
+              "selectedThisRound": 100,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 10,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_piqoHVmizs0wVIa29EYK6610",
+    "prose": "候选 11 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用（刘霞、方小利） — 决策分 5.62，可信度 medium（0.66）；本轮余量 8\n     匹配：name_teacher（0.97）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 11,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 5
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "化学与社会",
+            "rank": 1,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 2,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据素养与数据利用",
+            "rank": 3,
+            "teacher": "刘霞、方小利",
+            "score": 5.615,
+            "riskAdjustedScore": 5.5758,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 31,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 8,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 80,
+              "selectedThisRound": 44,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 9,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 33,
+              "selectedThisRound": 100,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 10,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_ohiMIfIxT20ARsAZitaU3215",
+    "prose": "候选 11 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用（刘霞、方小利） — 决策分 5.62，可信度 medium（0.66）；本轮余量 8\n     匹配：name_teacher（0.97）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 11,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 5
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "化学与社会",
+            "rank": 1,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 2,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据素养与数据利用",
+            "rank": 3,
+            "teacher": "刘霞、方小利",
+            "score": 5.615,
+            "riskAdjustedScore": 5.5758,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 31,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 8,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 80,
+              "selectedThisRound": 44,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 9,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 33,
+              "selectedThisRound": 100,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 10,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_vaidzZILosm2dXvzmJqL0178",
+    "prose": "候选 11 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用（刘霞、方小利） — 决策分 5.62，可信度 medium（0.66）；本轮余量 8\n     匹配：name_teacher（0.97）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 11,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 5
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "化学与社会",
+            "rank": 1,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 2,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据素养与数据利用",
+            "rank": 3,
+            "teacher": "刘霞、方小利",
+            "score": 5.615,
+            "riskAdjustedScore": 5.5758,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 31,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 8,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 80,
+              "selectedThisRound": 44,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 9,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 33,
+              "selectedThisRound": 100,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 10,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_cTTvBClI0BEvd1aEKy0n4788",
+    "prose": "候选 11 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用（刘霞、方小利） — 决策分 5.62，可信度 medium（0.66）；本轮余量 8\n     匹配：name_teacher（0.97）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 11,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 5
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "化学与社会",
+            "rank": 1,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 2,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据素养与数据利用",
+            "rank": 3,
+            "teacher": "刘霞、方小利",
+            "score": 5.615,
+            "riskAdjustedScore": 5.5758,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 31,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 8,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 80,
+              "selectedThisRound": 44,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 9,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 33,
+              "selectedThisRound": 100,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 10,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_PBjt1OHgu2r0Cp94o2fY9674",
+    "prose": "候选 11 门，排除 0 门，推荐 5 门：\n1. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n2. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 数据素养与数据利用（刘霞、方小利） — 决策分 5.62，可信度 medium（0.66）；本轮余量 8\n     匹配：name_teacher（0.97）\n     维度：gradeFriendliness raw=8.4 rel=0.35 decision=6.52(证据 3 条) | workloadFriendliness raw=3.8 rel=0.65 decision=4.38(证据 12 条) | attendanceFriendliness raw=4.2 rel=0.55 decision=4.78(证据 8 条) | studentSentiment raw=7.5 rel=0.48 decision=6.47(证据 3 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（12/13）、考勤宽松度 偏少（8/13）、给分友好度 偏少（3/13）、综合口碑 偏少（3/13）\n     理由：给分友好度 居中（6.5/10）\n     理由：给分友好度 原始分 8.4，因证据仅 3 条按可靠性 0.35 向中性收缩为 6.5\n     理由：综合口碑 原始分 7.5，因证据仅 3 条按可靠性 0.48 向中性收缩为 6.5\n     理由：教师评价样本较充分（本次计分 13 条）\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 11,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 5
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "化学与社会",
+            "rank": 1,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 2,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据素养与数据利用",
+            "rank": 3,
+            "teacher": "刘霞、方小利",
+            "score": 5.615,
+            "riskAdjustedScore": 5.5758,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 31,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 8,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 80,
+              "selectedThisRound": 44,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "西方音乐史与名作赏析",
+            "rank": 9,
+            "score": 4.9679,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 33,
+              "selectedThisRound": 100,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 10,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_RppbAr1yecF6KvMEpjtD5809",
+    "prose": "候选 10 门，排除 0 门，推荐 5 门：\n1. 女性健康与疾病预防 — 决策分 5.70，可靠推荐 5.50，可信度 low（0.00）；本轮余量 50\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=6.3 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=9.3 rel=0.26 decision=6.46(证据 2 条) | attendanceFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | studentSentiment raw=6.7 rel=0.43 decision=6.00(证据 1 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（2/3）、考勤宽松度 偏少（1/3）、综合口碑 偏少（1/3）\n     理由：课业轻松度 居中（6.5/10）\n     理由：课业轻松度 原始分 9.3，因证据仅 2 条按可靠性 0.26 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 3 条，统计意义有限\n     ⚠ 课业轻松度 仅有 2 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 1 条评价提到，该维度不确定性较高\n2. 健康心理与压力应对 — 决策分 5.50，可信度 medium（0.58）；本轮余量 29\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.1 rel=0.43 decision=6.63(证据 1 条) | workloadFriendliness raw=2.7 rel=0.55 decision=3.94(证据 7 条) | attendanceFriendliness raw=3.8 rel=0.53 decision=4.59(证据 5 条) | studentSentiment raw=7.2 rel=0.46 decision=6.28(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（7/7）、考勤宽松度 偏少（5/7）、综合口碑 偏少（2/7）、给分友好度 偏少（1/7）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.1，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.6\n     理由：课业轻松度 原始分 2.7，因证据仅 7 条按可靠性 0.55 向中性收缩为 3.9\n     理由：教师评价样本较少（本次计分 7 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n3. 中华民族共同体概论 — 决策分 5.49，可信度 low（0.00）；本轮余量 44\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=4.9 rel=0.35 decision=5.29(证据 3 条) | attendanceFriendliness raw=6.1 rel=0.35 decision=5.71(证据 3 条) | studentSentiment raw=6.7 rel=0.43 decision=6.00(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 60%、考勤宽松度 30%、综合口碑 10%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 60%、考勤宽松度 30%、综合口碑 10%\n     证据强度：课业轻松度 偏少（3/4）、考勤宽松度 偏少（3/4）、综合口碑 偏少（1/4）\n     缺少数据：gradeFriendliness（权重已按比例重分配）\n     理由：综合口碑 居中（6.0/10）\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 4 条，统计意义有限\n     ⚠ 综合口碑 仅有 1 条评价提到，该维度不确定性较高\n4. 工业革命与人类发展 — 决策分 5.48，可信度 low（0.27）；本轮余量 28\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=5.3 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=6.4 rel=0.26 decision=5.73(证据 2 条) | attendanceFriendliness raw=3.8 rel=0.46 decision=4.72(证据 2 条) | studentSentiment raw=6.7 rel=0.43 decision=6.00(证据 1 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（2/2）、考勤宽松度 偏少（2/2）、综合口碑 偏少（1/2）\n     理由：综合口碑 居中（6.0/10）\n     理由：教师评价样本较少（本次计分 2 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 2 条，统计意义有限\n     ⚠ 课业轻松度 仅有 2 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 2 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 1 条评价提到，该维度不确定性较高\n5. 大学文明的历程 — 决策分 4.95，可靠推荐 5.28，可信度 low（0.41）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=6.5 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=2.5 rel=0.46 decision=4.13(证据 4 条) | attendanceFriendliness raw=3.8 rel=0.51 decision=4.63(证据 4 条) | studentSentiment raw=5.1 rel=0.26 decision=5.38(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（4/4）、考勤宽松度 偏少（4/4）、综合口碑 偏少（2/4）\n     理由：给分友好度 居中（5.5/10）\n     理由：给分友好度 原始分 6.5，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：课业轻松度 原始分 2.5，因证据仅 4 条按可靠性 0.46 向中性收缩为 4.1\n     理由：教师评价样本较少（本次计分 4 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 4 条，统计意义有限\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 9,
+        "sectionCount": 10,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 2
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "女性健康与疾病预防",
+            "rank": 1,
+            "score": 5.7044,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 50,
+              "selectedThisRound": 95,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "健康心理与压力应对",
+            "rank": 2,
+            "score": 5.4988,
+            "riskAdjustedScore": 5.4993,
+            "competition": {
+              "roundQuota": 29,
+              "selectedThisRound": 65,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "中华民族共同体概论",
+            "rank": 3,
+            "score": 5.4877,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 44,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "工业革命与人类发展",
+            "rank": 4,
+            "score": 5.4765,
+            "riskAdjustedScore": 5.4936,
+            "competition": {
+              "roundQuota": 28,
+              "selectedThisRound": 28,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "大学文明的历程",
+            "rank": 5,
+            "score": 4.9525,
+            "riskAdjustedScore": 5.2776,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 33,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "战略传播概论",
+            "rank": 6,
+            "score": 4.766,
+            "reviewCount": 1,
+            "competition": {
+              "roundQuota": 31,
+              "selectedThisRound": 42,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "中国司法制度",
+            "rank": 7,
+            "score": 4.2173,
+            "reviewCount": 1,
+            "competition": {
+              "roundQuota": 12,
+              "selectedThisRound": 26,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_ET_wnidurJyrlOrcETKdUzq8973",
+    "prose": "候选 10 门，排除 0 门，推荐 5 门：\n1. 舞台表演艺术审美体验 — 决策分 6.12，可靠推荐 5.94，可信度 medium（0.70）；本轮余量 27\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.3 rel=0.43 decision=6.71(证据 1 条) | workloadFriendliness raw=6.7 rel=0.46 decision=6.03(证据 6 条) | attendanceFriendliness raw=3.5 rel=0.62 decision=4.24(证据 9 条) | studentSentiment raw=7.4 rel=0.52 decision=6.49(证据 6 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：考勤宽松度 偏少（9/9）、课业轻松度 偏少（6/9）、综合口碑 偏少（6/9）、给分友好度 偏少（1/9）\n     理由：给分友好度 居中（6.7/10）\n     理由：给分友好度 原始分 8.3，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：教师评价样本较少（本次计分 9 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n2. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n3. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 10,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 3
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "舞台表演艺术审美体验",
+            "rank": 1,
+            "score": 6.1246,
+            "riskAdjustedScore": 5.9355,
+            "competition": {
+              "roundQuota": 27,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "化学与社会",
+            "rank": 2,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 3,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 8,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  },
+  {
+    "callId": "call_00_RNSP2Y4IyGz08v3YtV5m8047",
+    "prose": "候选 10 门，排除 0 门，推荐 5 门：\n1. 舞台表演艺术审美体验 — 决策分 6.12，可靠推荐 5.94，可信度 medium（0.70）；本轮余量 27\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.3 rel=0.43 decision=6.71(证据 1 条) | workloadFriendliness raw=6.7 rel=0.46 decision=6.03(证据 6 条) | attendanceFriendliness raw=3.5 rel=0.62 decision=4.24(证据 9 条) | studentSentiment raw=7.4 rel=0.52 decision=6.49(证据 6 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：考勤宽松度 偏少（9/9）、课业轻松度 偏少（6/9）、综合口碑 偏少（6/9）、给分友好度 偏少（1/9）\n     理由：给分友好度 居中（6.7/10）\n     理由：给分友好度 原始分 8.3，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：教师评价样本较少（本次计分 9 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n2. 化学与社会 — 决策分 5.95，可靠推荐 5.88，可信度 high（0.85）；本轮余量 7\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.4 rel=0.46 decision=6.82(证据 2 条) | workloadFriendliness raw=5.0 rel=0.81 decision=5.09(证据 32 条) | attendanceFriendliness raw=4.1 rel=0.85 decision=4.31(证据 31 条) | studentSentiment raw=8.2 rel=0.66 decision=7.31(证据 15 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 充分（32/32）、考勤宽松度 充分（31/32）、综合口碑 中等（15/32）、给分友好度 偏少（2/32）\n     理由：综合口碑较好（7.3/10）\n     理由：给分友好度 原始分 8.4，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.8\n     理由：教师评价样本较充分（本次计分 32 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 2 条评价提到，该维度不确定性较高\n3. 环境与人类 — 决策分 5.73，可靠推荐 5.66，可信度 medium（0.69）；本轮余量 9\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=8.2 rel=0.43 decision=6.66(证据 1 条) | workloadFriendliness raw=2.6 rel=0.55 decision=3.93(证据 8 条) | attendanceFriendliness raw=6.8 rel=0.41 decision=6.01(证据 7 条) | studentSentiment raw=7.6 rel=0.46 decision=6.45(证据 2 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 偏少（8/8）、考勤宽松度 偏少（7/8）、综合口碑 偏少（2/8）、给分友好度 偏少（1/8）\n     理由：课业轻松度偏弱（3.9/10）\n     理由：给分友好度 原始分 8.2，因证据仅 1 条按可靠性 0.43 向中性收缩为 6.7\n     理由：课业轻松度 原始分 2.6，因证据仅 8 条按可靠性 0.55 向中性收缩为 3.9\n     理由：综合口碑 原始分 7.6，因证据仅 2 条按可靠性 0.46 向中性收缩为 6.5\n     理由：教师评价样本较少（本次计分 8 条），结论仅供参考\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 给分友好度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 综合口碑 仅有 2 条评价提到，该维度不确定性较高\n4. 行为健康 — 决策分 5.32，可靠推荐 5.38，可信度 medium（0.69）；本轮余量 10\n     匹配：exact_name（0.78）\n     维度：gradeFriendliness raw=7.6 rel=0.00 decision=5.50(证据 0 条) | workloadFriendliness raw=4.2 rel=0.58 decision=4.76(证据 11 条) | attendanceFriendliness raw=5.9 rel=0.56 decision=5.70(证据 10 条) | studentSentiment raw=6.2 rel=0.48 decision=5.81(证据 9 条)\n     权重：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     证据强度：课业轻松度 中等（11/11）、考勤宽松度 中等（10/11）、综合口碑 偏少（9/11）\n     理由：综合口碑 居中（5.8/10）\n     理由：给分友好度 原始分 7.6，因证据仅 0 条按可靠性 0.00 向中性收缩为 5.5\n     理由：教师评价样本较充分（本次计分 11 条）\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n5. 数据要素 — 决策分 5.30，可靠推荐 5.50，可信度 low（0.00）；本轮余量 5\n     匹配：exact_name（0.78）\n     维度：workloadFriendliness raw=3.8 rel=0.43 decision=4.77(证据 1 条) | attendanceFriendliness raw=9.3 rel=0.23 decision=6.36(证据 1 条)\n     权重（请求）：给分友好度 50%、课业轻松度 30%、考勤宽松度 15%、综合口碑 5%\n     权重（实际）：课业轻松度 67%、考勤宽松度 33%\n     权重调整：给分友好度无可用数据，其 50% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     权重调整：综合口碑无可用数据，其 5% 权重已分配至：课业轻松度 67%、考勤宽松度 33%\n     证据强度：课业轻松度 偏少（1/1）、考勤宽松度 偏少（1/1）\n     缺少数据：gradeFriendliness、studentSentiment（权重已按比例重分配）\n     理由：考勤宽松度 居中（6.4/10）\n     理由：考勤宽松度 原始分 9.3，因证据仅 1 条按可靠性 0.23 向中性收缩为 6.4\n     理由：教师评价样本较少（本次计分 0 条），结论仅供参考\n     理由：缺少可靠数据的维度：给分友好度、综合口碑\n     ⚠ 课程或评价缺少教师信息，匹配仅依据课程名称\n     ⚠ 评价匹配置信度 0.78 接近阈值，建议人工核对评价来源课程是否为同一门\n     ⚠ 评价样本仅 1 条，统计意义有限\n     ⚠ 课业轻松度 仅有 1 条评价提到，该维度不确定性较高\n     ⚠ 考勤宽松度 仅有 1 条评价提到，该维度不确定性较高",
+    "contentTypes": [
+      "text",
+      "text"
+    ],
+    "hasPresentation": true,
+    "presentationKeys": [
+      "schema",
+      "version",
+      "scope",
+      "coverage",
+      "recommendations",
+      "results"
+    ],
+    "presentation": {
+      "schema": "course-copilot.recommendation-context",
+      "version": 1,
+      "scope": {
+        "candidateScope": "unknown",
+        "source": "unknown",
+        "statement": "无法确认当前课程列表是否已应用学校的有余量筛选。",
+        "confirmed": false
+      },
+      "coverage": {
+        "courseCount": 10,
+        "sectionCount": 10,
+        "hydratedSectionCount": 1,
+        "ratedCourseCount": 5,
+        "insufficientDataCount": 0,
+        "exhausted": null
+      },
+      "recommendations": {
+        "visibleCount": 5,
+        "ratedButNotRecommendedCount": 3
+      },
+      "results": {
+        "recommended": [
+          {
+            "courseName": "舞台表演艺术审美体验",
+            "rank": 1,
+            "score": 6.1246,
+            "riskAdjustedScore": 5.9355,
+            "competition": {
+              "roundQuota": 27,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "化学与社会",
+            "rank": 2,
+            "score": 5.9481,
+            "riskAdjustedScore": 5.8814,
+            "competition": {
+              "roundQuota": 7,
+              "selectedThisRound": 72,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "环境与人类",
+            "rank": 3,
+            "score": 5.7339,
+            "riskAdjustedScore": 5.6604,
+            "competition": {
+              "roundQuota": 9,
+              "selectedThisRound": 67,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "行为健康",
+            "rank": 4,
+            "score": 5.3237,
+            "riskAdjustedScore": 5.3785,
+            "competition": {
+              "roundQuota": 10,
+              "selectedThisRound": 45,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "数据要素",
+            "rank": 5,
+            "score": 5.2974,
+            "riskAdjustedScore": 5.5,
+            "competition": {
+              "roundQuota": 5,
+              "selectedThisRound": 60,
+              "source": "page_native"
+            }
+          }
+        ],
+        "ratedButNotRecommended": [
+          {
+            "courseName": "中国海洋边界问题",
+            "rank": 6,
+            "score": 5.2381,
+            "reviewCount": 8,
+            "competition": {
+              "roundQuota": 35,
+              "selectedThisRound": 34,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "商业伦理",
+            "rank": 7,
+            "score": 5.0888,
+            "reviewCount": 5,
+            "competition": {
+              "roundQuota": 4,
+              "selectedThisRound": 61,
+              "source": "page_native"
+            }
+          },
+          {
+            "courseName": "智能电网与智慧城市",
+            "rank": 8,
+            "score": 4.7836,
+            "reviewCount": 3,
+            "competition": {
+              "roundQuota": 8,
+              "selectedThisRound": 49,
+              "source": "page_native"
+            }
+          }
+        ],
+        "insufficientData": []
+      }
+    }
+  }
+]

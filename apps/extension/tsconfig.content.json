@@ -1,0 +1,51 @@
+{
+  /*
+   * The CONTENT SCRIPT's emit configuration — the only tsc invocation in this project that produces JavaScript.
+   *
+   * ## Why this config exists
+   *
+   * The extension's main config used to emit everything under `src/`, and esbuild then overwrote the worker and the panel. That
+   * left a trap: `tsc` writes a JavaScript file for every module it COMPILES, so the moment the worker imported a new local
+   * module, that module appeared in `dist/background/` as a script the manifest never names. This was measured, not assumed —
+   * adding one import to the worker put `dist/background/memory-cache.js` into the artifact even though the file was `exclude`d,
+   * because `exclude` only filters the root files `include` discovers; a module reached through an import still joins the program.
+   *
+   * Emission is therefore split by owner:
+   *
+   * - THIS config emits exactly one file, the content script, which must stay a CLASSIC script and so cannot be handed to esbuild
+   *   without risking module syntax in a file the browser parses as a script;
+   * - `apps/extension/tsconfig.json` typechecks the whole extension and emits nothing;
+   * - the worker and the panel are bundled by esbuild.
+   *
+   * ## Why `include` is empty
+   *
+   * `files` and `include` are inherited SEPARATELY: overriding `files` does not stop the parent's `include` from also being used,
+   * which pulled the worker and the panel into this program and emitted them. An empty `include` cancels the inherited one, so the
+   * `files` list below is the complete program. Both facts were measured — the first attempt at this config compiled three files.
+   *
+   * ## Why the declaration files are listed explicitly
+   *
+   * `chrome.d.ts` holds the extension API types and `globals.d.ts` declares the global `chrome` binding. Both are AMBIENT — no
+   * imports, no exports — which is what lets the content script reference `RuntimeMessage` without an import. An import is exactly
+   * what once made the compiler emit a bare module marker into this file, and the browser then rejected the whole script.
+   *
+   * `recommendation-types.d.ts` is the ONE deliberate exception, and it is listed for the same reason: it DOES import, but only as a
+   * TYPE, purely to alias the canonical `RecommendationResult` into the global scope so `chrome.d.ts` can name it without becoming
+   * a module. A declaration file emits nothing, so the content script's output stays a classic script — measured, not assumed.
+   *
+   * They are named directly rather than re-including `src/**` declaration patterns, so this config cannot quietly acquire a
+   * declaration belonging to another owner.
+   */
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist"
+  },
+  "files": [
+    "src/content/content-script.ts",
+    "src/types/chrome.d.ts",
+    "src/types/globals.d.ts",
+    "src/types/recommendation-types.d.ts"
+  ],
+  "include": []
+}

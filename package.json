@@ -1,0 +1,49 @@
+{
+  "name": "course-selection-copilot",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Course Copilot — a browser extension that helps Wuhan University students compare currently available courses using WHU course data and public student review evidence, with deterministic ranking and adjustable preferences. It never enrols, drops or submits.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "extension:build": "node scripts/build-extension.mjs",
+    "extension:verify": "node scripts/verify-extension-skeleton.mjs",
+    "extension:typecheck": "tsc -p apps/extension/tsconfig.json --noEmit",
+    "provider:typecheck": "tsc -p packages/provider/tsconfig.json --noEmit",
+    "provider:build": "tsc -p packages/provider/tsconfig.json",
+    "recommendation:typecheck": "tsc -p packages/recommendation/tsconfig.json --noEmit",
+    "recommendation:build": "tsc -p packages/recommendation/tsconfig.json",
+    "extension:privacy": "node scripts/confirm-content-privacy.mjs",
+    "verify": "npm run typecheck && npm run test"
+  },
+  "dependencies": {
+    "@course-copilot/core": "workspace:*",
+    "@course-copilot/provider": "workspace:*"
+  },
+  "devDependencies": {
+    "@course-copilot/recommendation": "workspace:*",
+    "@types/node": "^22.10.2",
+    "esbuild": "0.28.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=20.11"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lv-yuchen/course-copilot.git"
+  },
+  "keywords": [
+    "browser-extension",
+    "chrome-extension",
+    "edge-extension",
+    "whu",
+    "course-selection",
+    "recommendation"
+  ]
+}
