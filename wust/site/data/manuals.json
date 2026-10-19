@@ -1,0 +1,44 @@
+[
+  {
+    "file": "mooc.doc",
+    "platform": "爱课程（中国大学 MOOC）",
+    "name": "附件2：爱课程(中国大学MOOC)学生学习手册.doc",
+    "bytes": 4896768,
+    "sha256": "f03913715287f9977870bbc335032586ebcd1a47284285ae5bd56dd345c8e0e9"
+  },
+  {
+    "file": "chaoxing-chuke.doc",
+    "platform": "超星尔雅 · 楚课联盟",
+    "name": "附件3：超星尔雅、楚课联盟学生学习手册.doc",
+    "bytes": 2119168,
+    "sha256": "32fe35c437f75c7379ac471525a370675e957967c60ec51704e2abeaa5488a8e"
+  },
+  {
+    "file": "uok.pptx",
+    "platform": "优课联盟",
+    "name": "附件4：优课联盟平台学生使用手册.pptx",
+    "bytes": 10952730,
+    "sha256": "1432b208b0e43cdcc8914f5009d339ba754bffa73cbfa5187b5d1e33f96f0d2f"
+  },
+  {
+    "file": "xuetang.doc",
+    "platform": "学堂云（雨课堂）",
+    "name": "附件5：学堂云(雨课堂)学生学习手册.doc",
+    "bytes": 971776,
+    "sha256": "abacd77195af027bb0da14a92f8a37cc22d89a3e8eef1fff853b52d0011ef404"
+  },
+  {
+    "file": "zhihuishu.pptx",
+    "platform": "智慧树",
+    "name": "附件6：智慧树平台学生学习手册.pptx",
+    "bytes": 8243376,
+    "sha256": "c5523006b75e77c686a8ea1b463392ae8e8373cc31f49ee996671fc3ad4fd353"
+  },
+  {
+    "file": "course-selection.pptx",
+    "platform": "选课指南",
+    "name": "2024级新生选课讲解.pptx",
+    "bytes": 9365063,
+    "sha256": "d036d547506274f67dd8ebae758607d35d7f9d4439e2d27955caa1d975cc0e2a"
+  }
+]

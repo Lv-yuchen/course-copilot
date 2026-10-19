@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-10",
+  "inputFiles": 9,
+  "previouslyImportedFiles": 2,
+  "identicalDuplicateFiles": 1,
+  "newUniqueFiles": 6,
+  "examinedRows": 432,
+  "addedCatalogRows": 193,
+  "skippedRows": 239,
+  "newCourses": 37,
+  "totalCourses": 240,
+  "totalReviews": 1096,
+  "reviewChanges": 0,
+  "integrity": "ok",
+  "reimportAdded": 0,
+  "policy": "按课程和完整教师名称查缺补漏，只补充空缺基础字段；不开课状态仅作为历史信息，不删除课程或评价；不展示清单学年和开课安排。"
+}
